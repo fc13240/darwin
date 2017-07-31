@@ -1,0 +1,9 @@
+入口：index.html
+模块库：vendor/
+程序入口：app/app.js
+组件配置：app/components/
+仪表板控制：app/controllers/
+挂件页面：app/partials/
+服务：app/services/
+指令：app/directives/
+图表：app/panels/

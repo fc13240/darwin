@@ -1,0 +1,44 @@
+[
+    {
+        "comp": 1,
+        "compName": "组件名称1",
+        "depends": "",
+        "x": 74,
+        "y": 349
+    },
+    {
+        "comp": 2,
+        "compName": "组件名称2",
+        "depends": "",
+        "x": 134,
+        "y": 11
+    },
+    {
+        "comp": 3,
+        "compName": "组件名称3",
+        "depends": "1,2",
+        "x": 20,
+        "y": 100
+    },
+    {
+        "comp": 4,
+        "compName": "组件名称4",
+        "depends": "3",
+        "x": 456,
+        "y": 169
+    },
+    {
+        "comp": 5,
+        "compName": "组件名称5",
+        "depends": "4",
+        "x": 464,
+        "y": 285
+    },
+    {
+        "comp": 6,
+        "compName": "组件名称6",
+        "depends": "4",
+        "x": 734,
+        "y": 247
+    }
+]

@@ -1,0 +1,28 @@
+<html>
+<head>
+</head>
+<body>
+
+<div id="meterChart" style="width:200;height:200;"></div>
+
+<script src="/vis/jquery-1.11.1.min.js"></script>
+<script src="/vis/d3.min.js"></script>
+<script src="/vis/darwinvis.js"></script>
+<script src="/vis/d3bubble/darwinbubble.js"></script>
+<script>
+var domid = "meterChart";
+var data = {'name':'data','children':[{name:'xjj',size:1},{name:'zjh',size:2},{name:'zlh',size:3}]};
+alert(data);
+var graph = new DarwinBubble(domid, data);
+
+var width = 800;
+var height = 600;//auto
+var options = {
+		"header.title.text":"Top 15 Fears",
+		"header.subtitle.text":"What strikes the most terror in people?",
+};
+graph.draw(width, height, options);
+</script>
+
+</body>
+</html>

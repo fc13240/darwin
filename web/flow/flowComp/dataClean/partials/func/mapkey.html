@@ -1,0 +1,73 @@
+<div id="otherConfig">
+ 
+	<div class="form-group">
+    	<label class="col-sm-3 control-label">所属数据：</label>
+    	<div class="col-sm-6">
+    		<select class="form-control" ng-init="vcolItem.data=vcolItem.data||inputinfos[0].dataName" ng-model="vcolItem.data">
+				<option value="{{input.dataName}}" ng-selected="input.dataName==vcolItem.data" ng-repeat="input in inputinfos">{{input.dataName}}</option>
+			</select>
+    	</div>
+  	</div>
+	<div class="form-group">
+    	<label class="col-sm-3 control-label"><span class="redStar">*&nbsp;</span>新列名称：</label>
+    	<div class="col-sm-6">
+      		<input type="text" name="newColName" class="form-control" ng-model="vcolItem.colName" ng-init="vcolItem.colName=vcolItem.colName" placeholder="新列名称" data-rule="required" ng-blur="isExist(vcolItem.colName)"/>
+    	</div>
+      <input id="newCol" type="hidden" value="{{vcolItem.colName}}" >
+  	</div>
+  	<!-- 
+  	<div class="form-group">
+    	<label for="hdfsname" class="col-sm-3 control-label">参数赋值：</label>
+  	</div>
+  	 -->
+  	<div class="form-group">
+    	<label class="col-sm-3 control-label">待转换列：</label>
+    	<div class="col-sm-6">
+      		<select class="form-control" ng-model="vcolItem.args[0].value" ng-init="param=vcolItem.args[0]||{type:'field',desc:'待转换列',value:getAllCols()[0]};vcolItem.args[0]=param">
+				<option value="{{col}}" ng-selected="col==vcolItem.args[0].value" ng-repeat="col in getAllCols(vcolItem.data) track by $index">{{col}}</option>
+			</select>
+    	</div>
+  	</div>
+  	<hdfs-path name="hdfsfile" id="map_key" init="param=vcolItem.args[1]||{type:'hdfsfile',desc:'字典HDFS文件',value:''};vcolItem.args[1]=param" index="index" control-label="字典HDFS文件" label-col="3" input-col="6" model-val="vcolItem.args[1].value" other="form-control"></hdfs-path>
+  	<!-- 
+  	<div class="form-group">
+    	<label class="col-sm-3 control-label">字典HDFS文件：</label>
+    	<div class="col-sm-6">
+      		<input type="text" class="form-control" ng-model="vcolItem.args[1].value" ng-init="param=vcolItem.args[1]||{type:'hdfsfile',desc:'字典HDFS文件',value:''};vcolItem.args[1]=param" placeholder="字典HDFS文件"/>
+    	</div>
+  	</div>
+  	 -->
+  	<!-- <col-separator control-label="字典文件列分隔符" model-val="storeinfo.colDelimitExpr"></col-separator> -->
+  	
+    <div class="form-group">
+      <label class="col-sm-3 control-label">字典文件列分隔符：</label>
+      <div class="col-sm-6">
+          <input type="text" ng-trim="false" class="form-control" ng-model="vcolItem.args[2].value" ng-init="param=vcolItem.args[2]||{type:'string',desc:'字典文件列分隔符',value:''};vcolItem.args[2]=param" placeholder="字典文件列分隔符"/>
+      </div>
+    </div>
+  	<div class="form-group">
+    	<label class="col-sm-3 control-label"><span class="redStar">*&nbsp;</span>字典key所在列：</label>
+    	<div class="col-sm-6">
+      		<input type="text" name="keyColume" class="form-control" ng-model="vcolItem.args[3].value" ng-init="param=vcolItem.args[3]||{type:'string',desc:'字典key所在列',value:''};vcolItem.args[3]=param" placeholder="字典key所在列" data-rule="required"/>
+    	</div>
+  	</div>
+  	<div class="form-group">
+    	<label class="col-sm-3 control-label" style="padding-left:5px"><span class="redStar">*&nbsp;</span>字典value所在列：</label>
+    	<div class="col-sm-6">
+      		<input type="text" name="valueColume" class="form-control" ng-model="vcolItem.args[4].value" ng-init="param=vcolItem.args[4]||{type:'string',desc:'字典value所在列',value:''};vcolItem.args[4]=param" placeholder="字典value所在列" data-rule="required"/>
+    	</div>
+  	</div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label" style="padding-left:5px"><span class="redStar">*&nbsp;</span>映射失败默认值:</label>
+      <div class="col-sm-6">
+          <input type="text" ng-trim="false" name="defaultValue" class="form-control" ng-model="vcolItem.args[5].value" ng-init="param=vcolItem.args[5]||{type:'string',desc:'映射失败默认值',value:''};vcolItem.args[5]=param" placeholder="映射失败默认值"/>
+      </div>
+      <div  class="glyphicon glyphicon-question-sign propmt" data-toggle="tooltip"  ng-mouseenter="mouseenter()" data-content='没有映射到的内容为输入项的内容'  ></div>
+    </div>
+    <!-- <div class="form-group">
+      <label class="col-sm-3 control-label"><span class="redStar">*&nbsp;</span>映射失败默认值</label>
+      <div class="col-sm-6">
+          <input type="text" name="defaultValue" class="form-control" ng-model="vcolItem.defaultValue" ng-init="vcolItem.defaultValue=vcolItem.defaultValue" placeholder="映射失败默认值" data-rule="required"/>
+      </div>
+    </div> -->
+</div>

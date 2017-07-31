@@ -1,0 +1,41 @@
+{
+    "_type": "date_histogram",
+    "facets": {
+        "0": {
+            "_type": "date_histogram",
+            "entries": [
+                {
+                    "count": 969,
+                    "time": "1432980577242"
+                }
+            ]
+        },
+        "1": {
+            "_type": "date_histogram",
+            "entries": [
+                {
+                    "count": 227,
+                    "time": "1432980577262"
+                }
+            ]
+        },
+        "2": {
+            "_type": "date_histogram",
+            "entries": [
+                {
+                    "count": 698,
+                    "time": "1432980577283"
+                }
+            ]
+        }
+    },
+    "hits": {
+        "hits": [],
+        "max_score": 0,
+        "total": "211675"
+    },
+    "range": {
+        "from": "2015-04-01 14:45:01.860",
+        "to": "2015-04-02 02:45:01.860"
+    }
+}

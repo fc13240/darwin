@@ -1,0 +1,23 @@
+
+<div>
+    <div class="box-element user-card">
+        <div class="view">
+            <div class="title">
+                <img src="userInfo/img/spaces.png"/>
+            </div>
+            <div class="content">
+                <div>
+                    <h6 id="space1">共{{spaces.spaces.length||0}}个存储空间
+                </div>
+                <div>
+                    <div ng-click="goto(group)" class="progress" style="cursor: pointer;margin-bottom: 5px;text-align: center;line-height: 12px;" ng-repeat="group in spaces.spaces">
+                      <div class="progress-bar" aria-valuenow="{{group.percent}}" aria-valuemin="0" aria-valuemax="100" style="width: {{group.percent}};"></div>
+                      <div id="space2" style="font-size: 10px;position: absolute;">空间{{group.spacekb*1024|bytesToSize}}，已使用{{group.percent}}({{group.usagekb*1024|bytesToSize}})</div>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</div>
+

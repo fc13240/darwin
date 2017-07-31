@@ -1,0 +1,12 @@
+[{'_id':'selfblank','name':'全部日志监控'},
+ {'_id':'tomcatAccessLogs','name':'tomcat Access日志监控'},
+ {'_id':'tomcatCatalinaLogs','name':'tomcat Catalina日志监控'},
+ {'_id':'darwinServiceLogs','name':'darwin后台服务监控'},
+ {'_id':'darwinAgentLogs','name':'darwinAgent监控'},
+ {'_id':'darwinCompLogs','name':'darwin组件运行日志监控'},
+ {'_id':'darwinAlertLogs','name':'darwin告警日志监控'},
+ {'_id':'darwinAuditLogs','name':'审计日志监控'},
+ {'_id':'darwinUpdateLogs','name':'升级日志监控'}
+]
+
+

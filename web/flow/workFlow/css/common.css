@@ -1,0 +1,33 @@
+#workflow-wrapper {background: url("../img/platform-workbench-bg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);}
+#content {
+             border-radius: 3px 3px 3px 3px;
+             position: relative;
+        }
+        #graph div.graph {
+            background: none repeat scroll 0 0 #ffffff;
+            /*border-radius: 10px 10px 10px 10px;*/
+            box-shadow: 2px 1px 10px rgba(39, 57, 102, 0.44);
+            color: #333333;
+            display: inline-block;
+            position: absolute;
+            width:160px;
+        }
+        #graph div.graph.selected {
+            background: none repeat scroll 0 0 #ffffff;
+            border: 1px solid #fd800a;
+            /*border-radius: 10px 10px 10px 10px;*/
+            box-shadow: 2px 1px 10px rgba(253, 128, 10, 0.44);
+            color: #333333;
+            display: inline-block;
+            position: absolute;
+        }
+        #graph div.graph div.title {
+            border-right:1px solid #ccc;
+            overflow: auto;
+            padding: 5px;
+            float:left;
+        }
+        #graph div.graph div.content {
+            padding: 5px;
+            text-align: center;
+        }

@@ -1,0 +1,26 @@
+ng-repeat 指令会重复一个 HTML 元素：
+
+<div ng-app="" ng-init="names=['Jani','Hege','Kai']">
+  <p>使用 ng-repeat 来循环数组</p>
+  <ul>
+    <li ng-repeat="x in names">
+      {{ x }}
+    </li>
+  </ul>
+<div>
+
+div ng-app="" ng-init="names=[
+{name:'Jani',country:'Norway'},
+{name:'Hege',country:'Sweden'},
+{name:'Kai',country:'Denmark'}]">
+
+<p>循环对象：</p>
+<ul>
+  <li ng-repeat="x in names">
+    {{ x.name + ', ' + x.country }}
+  </li>
+</ul>
+
+</div>
+
+详见：http://www.w3cschool.cc/angularjs/angularjs-directives.html

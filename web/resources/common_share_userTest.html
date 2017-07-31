@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" ng-app="common_share">
+	<head>
+	  	<meta charset="utf-8">
+	  	<title>测试</title>
+	  	<link rel="stylesheet" href="/flow/flowComp/dataClean/css/bootstrap.min.css"/>
+	  	<link rel="stylesheet" href="/resources/zTree3.5.17/css/zTreeStyle/zTreeStyle.css" type="text/css">
+	  	<script src="/flow/flowComp/dataClean/js/lib/jquery-1.9.1.min.js"></script>
+	  	<script src="/flow/flowComp/dataClean/js/lib/bootstrap.min.js"></script>
+		<script src="/flow/flowComp/dataClean/js/lib/angular.js"></script>
+		<script type="text/javascript" src="/resources/js/jquery.blockUI.js"></script>
+		<script src="/resources/zTree3.5.17/js/jquery.ztree.all-3.5.min.js"></script>
+		<script src="/resources/js/common_share.js"></script>
+		<script>
+		$(function(){
+			/*var share = new SharePlugin({
+				"type":"hdfs",
+				"resources":"/user/yimr/huangfei"
+			});*/
+
+
+			angular.element("#shareDiv").scope().initConfig({
+				"type":"hdfs",
+				"resources":"/user/yimr/huangfei"
+			});
+
+		});
+		</script>
+	</head>
+<body>
+	<div ng-controller="compCtrl" id="shareDiv">
+		<common-share></common-share>
+	</div>
+</body>
+</html>

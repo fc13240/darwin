@@ -1,0 +1,11 @@
+ng-show 指令隐藏或显示一个 HTML 元素。
+
+<div ng-app="">
+
+<p ng-show="true">我是可见的。</p>
+
+<p ng-show="false">我是不可见的。</p>
+
+</div>
+
+详见：http://www.w3cschool.cc/angularjs/angularjs-html-dom.html

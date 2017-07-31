@@ -1,0 +1,53 @@
+<div class="panel panel-darwin">
+	<div style="border:1px solid #ccc;" class="panel-heading">
+		<div style="width:50%;float:left;">输出设置</div>
+		<div style="width:50%;float:left;text-align:right;">
+			<a class="add-hdfs-source" ng-click="addOneStore()"><span class="glyphicon glyphicon-plus"></span></a>
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+	<div class="panel-body">
+		<div ng-repeat="storeinfo in storeinfos" class="box box-default">
+			<div class="box-heading">
+				HDFS数据
+			</div>
+			<div class="box-body">
+				<span id="conn-count">
+					{{cleancompConfig.storeinfo[$index].dataName}}
+				</span>
+			</div>
+			<div>
+				<button type="button" class="btn btn-xs btn-default" ng-click="popup_store($index)">
+					<span class="glyphicon glyphicon-cog"></span>设置
+				</button>
+				<button type="button" class="btn btn-xs btn-default" ng-click="remove_store($index)">
+					<span class="glyphicon glyphicon-trash"></span>删除
+				</button>
+				<span ng-show="storeinfo.outrowfilter!='no'">
+					<input type="checkbox"  ng-model="showStoreCols[$index]">显示输出列
+				</span>
+			</div>
+			<div ng-show="showStoreCols[$index]" style="height:200px;overflow:auto;">
+				<table class="table table-hoverd table-bordered table-condensed" style="height:100px;overflow:auto;">
+					<thead>
+						<tr>
+							<th class="text-center">
+								输出列
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="colinfo in storeinfo.outCols">
+							<td>
+								{{colinfo}}
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+            <modal modaltitle="HDFS数据设置" modalid="hdfs_store_modal_{{$index}}">
+                <hdfs-store></hdfs-store>
+            </modal>
+		</div>
+	</div>
+</div>

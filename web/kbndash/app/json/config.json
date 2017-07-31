@@ -1,0 +1,1790 @@
+{
+    "status": 0,
+    "tables": [
+        {
+            "fields": [
+                {
+                    "name": "my_",
+                    "type": "string"
+                },
+                {
+                    "name": "my_http",
+                    "type": "string"
+                },
+                {
+                    "name": "my_ip",
+                    "type": "string"
+                },
+                {
+                    "name": "my_log",
+                    "type": "string"
+                },
+                {
+                    "name": "my_method",
+                    "type": "string"
+                },
+                {
+                    "name": "my_number",
+                    "type": "string"
+                },
+                {
+                    "name": "my_returncode",
+                    "type": "string"
+                },
+                {
+                    "name": "my_time",
+                    "type": "string"
+                },
+                {
+                    "name": "my_url",
+                    "type": "string"
+                }
+            ],
+            "name": "lanshen_local_4"
+        },
+        {
+            "fields": [
+                {
+                    "name": "my_",
+                    "type": "string"
+                },
+                {
+                    "name": "my_http",
+                    "type": "string"
+                },
+                {
+                    "name": "my_ip",
+                    "type": "string"
+                },
+                {
+                    "name": "my_log",
+                    "type": "string"
+                },
+                {
+                    "name": "my_method",
+                    "type": "string"
+                },
+                {
+                    "name": "my_number",
+                    "type": "string"
+                },
+                {
+                    "name": "my_returncode",
+                    "type": "string"
+                },
+                {
+                    "name": "my_time",
+                    "type": "string"
+                },
+                {
+                    "name": "my_url",
+                    "type": "string"
+                }
+            ],
+            "name": "lanshen_local_parquet"
+        },
+        {
+            "fields": [
+                {
+                    "name": "my_",
+                    "type": "string"
+                },
+                {
+                    "name": "my_http",
+                    "type": "string"
+                },
+                {
+                    "name": "my_ip",
+                    "type": "string"
+                },
+                {
+                    "name": "my_log",
+                    "type": "string"
+                },
+                {
+                    "name": "my_method",
+                    "type": "string"
+                },
+                {
+                    "name": "my_number",
+                    "type": "string"
+                },
+                {
+                    "name": "my_returncode",
+                    "type": "string"
+                },
+                {
+                    "name": "my_time",
+                    "type": "string"
+                },
+                {
+                    "name": "my_url",
+                    "type": "string"
+                }
+            ],
+            "name": "huizi02"
+        },
+        {
+            "fields": [
+                {
+                    "name": "axis_num",
+                    "type": "double"
+                },
+                {
+                    "name": "axistype",
+                    "type": "int"
+                },
+                {
+                    "name": "computestation",
+                    "type": "int"
+                },
+                {
+                    "name": "dealstatus",
+                    "type": "int"
+                },
+                {
+                    "name": "distance",
+                    "type": "double"
+                },
+                {
+                    "name": "entry_network",
+                    "type": "string"
+                },
+                {
+                    "name": "entry_station",
+                    "type": "string"
+                },
+                {
+                    "name": "entry_time",
+                    "type": "string"
+                },
+                {
+                    "name": "etcflag",
+                    "type": "int"
+                },
+                {
+                    "name": "exit_network",
+                    "type": "string"
+                },
+                {
+                    "name": "exit_station",
+                    "type": "string"
+                },
+                {
+                    "name": "exit_time",
+                    "type": "string"
+                },
+                {
+                    "name": "flagstation",
+                    "type": "int"
+                },
+                {
+                    "name": "jzxflag",
+                    "type": "int"
+                },
+                {
+                    "name": "overload_rate",
+                    "type": "double"
+                },
+                {
+                    "name": "recordtype",
+                    "type": "int"
+                },
+                {
+                    "name": "tailnum",
+                    "type": "int"
+                },
+                {
+                    "name": "total_weight",
+                    "type": "double"
+                },
+                {
+                    "name": "totalweightlimit",
+                    "type": "int"
+                },
+                {
+                    "name": "vehicle_class",
+                    "type": "string"
+                },
+                {
+                    "name": "vehicle_id",
+                    "type": "string"
+                },
+                {
+                    "name": "vehicle_type",
+                    "type": "string"
+                }
+            ],
+            "name": "jiaotong_1mb_tmp_0"
+        },
+        {
+            "fields": [
+                {
+                    "name": "my_",
+                    "type": "string"
+                },
+                {
+                    "name": "my_http",
+                    "type": "string"
+                },
+                {
+                    "name": "my_ip",
+                    "type": "string"
+                },
+                {
+                    "name": "my_log",
+                    "type": "string"
+                },
+                {
+                    "name": "my_method",
+                    "type": "string"
+                },
+                {
+                    "name": "my_number",
+                    "type": "string"
+                },
+                {
+                    "name": "my_returncode",
+                    "type": "string"
+                },
+                {
+                    "name": "my_time",
+                    "type": "string"
+                },
+                {
+                    "name": "my_url",
+                    "type": "string"
+                }
+            ],
+            "name": "bianji"
+        },
+        {
+            "fields": [
+                {
+                    "name": "age",
+                    "type": "int"
+                },
+                {
+                    "name": "day",
+                    "type": "string"
+                },
+                {
+                    "name": "mail",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "number",
+                    "type": "int"
+                },
+                {
+                    "name": "sex",
+                    "type": "string"
+                }
+            ],
+            "name": "huizi_localdata_1"
+        },
+        {
+            "fields": [
+                {
+                    "name": "age",
+                    "type": "string"
+                },
+                {
+                    "name": "day",
+                    "type": "string"
+                },
+                {
+                    "name": "mail",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "number",
+                    "type": "string"
+                },
+                {
+                    "name": "sex",
+                    "type": "string"
+                }
+            ],
+            "name": "huizi_ftp"
+        },
+        {
+            "fields": [
+                {
+                    "name": "c1",
+                    "type": "string"
+                }
+            ],
+            "name": "lanshen_5"
+        },
+        {
+            "fields": [
+                {
+                    "name": "axis_num",
+                    "type": "double"
+                },
+                {
+                    "name": "axistype",
+                    "type": "int"
+                },
+                {
+                    "name": "computestation",
+                    "type": "int"
+                },
+                {
+                    "name": "dealstatus",
+                    "type": "int"
+                },
+                {
+                    "name": "distance",
+                    "type": "double"
+                },
+                {
+                    "name": "entry_network",
+                    "type": "string"
+                },
+                {
+                    "name": "entry_station",
+                    "type": "string"
+                },
+                {
+                    "name": "entry_time",
+                    "type": "string"
+                },
+                {
+                    "name": "etcflag",
+                    "type": "int"
+                },
+                {
+                    "name": "exit_network",
+                    "type": "string"
+                },
+                {
+                    "name": "exit_station",
+                    "type": "string"
+                },
+                {
+                    "name": "exit_time",
+                    "type": "string"
+                },
+                {
+                    "name": "flagstation",
+                    "type": "int"
+                },
+                {
+                    "name": "jzxflag",
+                    "type": "int"
+                },
+                {
+                    "name": "overload_rate",
+                    "type": "double"
+                },
+                {
+                    "name": "recordtype",
+                    "type": "int"
+                },
+                {
+                    "name": "tailnum",
+                    "type": "int"
+                },
+                {
+                    "name": "total_weight",
+                    "type": "double"
+                },
+                {
+                    "name": "totalweightlimit",
+                    "type": "int"
+                },
+                {
+                    "name": "vehicle_class",
+                    "type": "string"
+                },
+                {
+                    "name": "vehicle_id",
+                    "type": "string"
+                },
+                {
+                    "name": "vehicle_type",
+                    "type": "string"
+                }
+            ],
+            "name": "test_yace_02"
+        },
+        {
+            "fields": [
+                {
+                    "name": "axis_num",
+                    "type": "int"
+                },
+                {
+                    "name": "axistype",
+                    "type": "int"
+                },
+                {
+                    "name": "computestation",
+                    "type": "int"
+                },
+                {
+                    "name": "dealstatus",
+                    "type": "int"
+                },
+                {
+                    "name": "distance",
+                    "type": "double"
+                },
+                {
+                    "name": "entry_network",
+                    "type": "string"
+                },
+                {
+                    "name": "entry_station",
+                    "type": "string"
+                },
+                {
+                    "name": "entry_time",
+                    "type": "string"
+                },
+                {
+                    "name": "etcflag",
+                    "type": "int"
+                },
+                {
+                    "name": "exit_network",
+                    "type": "string"
+                },
+                {
+                    "name": "exit_station",
+                    "type": "string"
+                },
+                {
+                    "name": "exit_time",
+                    "type": "string"
+                },
+                {
+                    "name": "flagstation",
+                    "type": "int"
+                },
+                {
+                    "name": "jzxflag",
+                    "type": "int"
+                },
+                {
+                    "name": "overload_rate",
+                    "type": "double"
+                },
+                {
+                    "name": "recordtype",
+                    "type": "int"
+                },
+                {
+                    "name": "total_weight",
+                    "type": "double"
+                },
+                {
+                    "name": "totalweightlimit",
+                    "type": "int"
+                },
+                {
+                    "name": "vehicle_class",
+                    "type": "string"
+                },
+                {
+                    "name": "vehicle_id",
+                    "type": "string"
+                },
+                {
+                    "name": "vehicle_type",
+                    "type": "string"
+                }
+            ],
+            "name": "jt"
+        },
+        {
+            "fields": [
+                {
+                    "name": "axis_num",
+                    "type": "double"
+                },
+                {
+                    "name": "axistype",
+                    "type": "int"
+                },
+                {
+                    "name": "computestation",
+                    "type": "int"
+                },
+                {
+                    "name": "dealstatus",
+                    "type": "int"
+                },
+                {
+                    "name": "distance",
+                    "type": "double"
+                },
+                {
+                    "name": "entry_network",
+                    "type": "string"
+                },
+                {
+                    "name": "entry_station",
+                    "type": "string"
+                },
+                {
+                    "name": "entry_time",
+                    "type": "string"
+                },
+                {
+                    "name": "etcflag",
+                    "type": "int"
+                },
+                {
+                    "name": "exit_network",
+                    "type": "string"
+                },
+                {
+                    "name": "exit_station",
+                    "type": "string"
+                },
+                {
+                    "name": "exit_time",
+                    "type": "string"
+                },
+                {
+                    "name": "flagstation",
+                    "type": "int"
+                },
+                {
+                    "name": "jzxflag",
+                    "type": "int"
+                },
+                {
+                    "name": "overload_rate",
+                    "type": "double"
+                },
+                {
+                    "name": "recordtype",
+                    "type": "int"
+                },
+                {
+                    "name": "tailnum",
+                    "type": "int"
+                },
+                {
+                    "name": "total_weight",
+                    "type": "double"
+                },
+                {
+                    "name": "totalweightlimit",
+                    "type": "int"
+                },
+                {
+                    "name": "vehicle_class",
+                    "type": "string"
+                },
+                {
+                    "name": "vehicle_id",
+                    "type": "string"
+                },
+                {
+                    "name": "vehicle_type",
+                    "type": "string"
+                }
+            ],
+            "name": "test_yace_01"
+        },
+        {
+            "fields": [
+                {
+                    "name": "col",
+                    "type": "array<string>"
+                }
+            ],
+            "name": "test_table"
+        },
+        {
+            "fields": [
+                {
+                    "name": "my_",
+                    "type": "string"
+                },
+                {
+                    "name": "my_http",
+                    "type": "string"
+                },
+                {
+                    "name": "my_ip",
+                    "type": "string"
+                },
+                {
+                    "name": "my_log",
+                    "type": "string"
+                },
+                {
+                    "name": "my_method",
+                    "type": "string"
+                },
+                {
+                    "name": "my_number",
+                    "type": "string"
+                },
+                {
+                    "name": "my_returncode",
+                    "type": "string"
+                },
+                {
+                    "name": "my_time",
+                    "type": "string"
+                },
+                {
+                    "name": "my_url",
+                    "type": "string"
+                }
+            ],
+            "name": "lanshen_local_3"
+        },
+        {
+            "fields": [
+                {
+                    "name": "age",
+                    "type": "int"
+                },
+                {
+                    "name": "day",
+                    "type": "string"
+                },
+                {
+                    "name": "mail",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "number",
+                    "type": "int"
+                },
+                {
+                    "name": "sex",
+                    "type": "string"
+                }
+            ],
+            "name": "local"
+        },
+        {
+            "fields": [
+                {
+                    "name": "my_",
+                    "type": "string"
+                },
+                {
+                    "name": "my_http",
+                    "type": "string"
+                },
+                {
+                    "name": "my_ip",
+                    "type": "string"
+                },
+                {
+                    "name": "my_log",
+                    "type": "string"
+                },
+                {
+                    "name": "my_method",
+                    "type": "string"
+                },
+                {
+                    "name": "my_number",
+                    "type": "string"
+                },
+                {
+                    "name": "my_returncode",
+                    "type": "string"
+                },
+                {
+                    "name": "my_time",
+                    "type": "string"
+                },
+                {
+                    "name": "my_url",
+                    "type": "string"
+                }
+            ],
+            "name": "lanshen_local_2"
+        },
+        {
+            "fields": [
+                {
+                    "name": "c1",
+                    "type": "string"
+                },
+                {
+                    "name": "c2",
+                    "type": "string"
+                },
+                {
+                    "name": "c3",
+                    "type": "string"
+                },
+                {
+                    "name": "c4",
+                    "type": "string"
+                },
+                {
+                    "name": "c5",
+                    "type": "string"
+                },
+                {
+                    "name": "c6",
+                    "type": "string"
+                },
+                {
+                    "name": "c7",
+                    "type": "string"
+                },
+                {
+                    "name": "ip",
+                    "type": "string"
+                }
+            ],
+            "name": "defaultdsid"
+        },
+        {
+            "fields": [
+                {
+                    "name": "c1",
+                    "type": "string"
+                },
+                {
+                    "name": "c10",
+                    "type": "string"
+                },
+                {
+                    "name": "c11",
+                    "type": "string"
+                },
+                {
+                    "name": "c12",
+                    "type": "string"
+                },
+                {
+                    "name": "c13",
+                    "type": "string"
+                },
+                {
+                    "name": "c14",
+                    "type": "string"
+                },
+                {
+                    "name": "c15",
+                    "type": "string"
+                },
+                {
+                    "name": "c16",
+                    "type": "string"
+                },
+                {
+                    "name": "c17",
+                    "type": "string"
+                },
+                {
+                    "name": "c18",
+                    "type": "string"
+                },
+                {
+                    "name": "c19",
+                    "type": "string"
+                },
+                {
+                    "name": "c2",
+                    "type": "string"
+                },
+                {
+                    "name": "c20",
+                    "type": "string"
+                },
+                {
+                    "name": "c21",
+                    "type": "string"
+                },
+                {
+                    "name": "c22",
+                    "type": "string"
+                },
+                {
+                    "name": "c3",
+                    "type": "string"
+                },
+                {
+                    "name": "c4",
+                    "type": "string"
+                },
+                {
+                    "name": "c5",
+                    "type": "string"
+                },
+                {
+                    "name": "c6",
+                    "type": "string"
+                },
+                {
+                    "name": "c7",
+                    "type": "string"
+                },
+                {
+                    "name": "c8",
+                    "type": "string"
+                },
+                {
+                    "name": "c9",
+                    "type": "string"
+                }
+            ],
+            "name": "joycexu_jiaotong_040402"
+        },
+        {
+            "fields": [
+                {
+                    "name": "phone",
+                    "type": "string"
+                },
+                {
+                    "name": "sid",
+                    "type": "int"
+                },
+                {
+                    "name": "uid",
+                    "type": "string"
+                }
+            ],
+            "name": "offline_data"
+        },
+        {
+            "fields": [
+                {
+                    "name": "axis_num",
+                    "type": "int"
+                },
+                {
+                    "name": "axistype",
+                    "type": "int"
+                },
+                {
+                    "name": "computestation",
+                    "type": "int"
+                },
+                {
+                    "name": "dealstatus",
+                    "type": "int"
+                },
+                {
+                    "name": "distance",
+                    "type": "double"
+                },
+                {
+                    "name": "entry_network",
+                    "type": "string"
+                },
+                {
+                    "name": "entry_station",
+                    "type": "string"
+                },
+                {
+                    "name": "entry_time",
+                    "type": "string"
+                },
+                {
+                    "name": "etcflag",
+                    "type": "int"
+                },
+                {
+                    "name": "exit_network",
+                    "type": "string"
+                },
+                {
+                    "name": "exit_station",
+                    "type": "string"
+                },
+                {
+                    "name": "exit_time",
+                    "type": "string"
+                },
+                {
+                    "name": "flagstation",
+                    "type": "int"
+                },
+                {
+                    "name": "jzxflag",
+                    "type": "int"
+                },
+                {
+                    "name": "overload_rate",
+                    "type": "double"
+                },
+                {
+                    "name": "recordtype",
+                    "type": "int"
+                },
+                {
+                    "name": "total_weight",
+                    "type": "double"
+                },
+                {
+                    "name": "totalweightlimit",
+                    "type": "int"
+                },
+                {
+                    "name": "vehicle_class",
+                    "type": "string"
+                },
+                {
+                    "name": "vehicle_id",
+                    "type": "string"
+                },
+                {
+                    "name": "vehicle_type",
+                    "type": "string"
+                }
+            ],
+            "name": "huizi_jt"
+        },
+        {
+            "fields": [
+                {
+                    "name": "my_",
+                    "type": "string"
+                },
+                {
+                    "name": "my_http",
+                    "type": "string"
+                },
+                {
+                    "name": "my_ip",
+                    "type": "string"
+                },
+                {
+                    "name": "my_log",
+                    "type": "string"
+                },
+                {
+                    "name": "my_method",
+                    "type": "string"
+                },
+                {
+                    "name": "my_number",
+                    "type": "string"
+                },
+                {
+                    "name": "my_returncode",
+                    "type": "string"
+                },
+                {
+                    "name": "my_time",
+                    "type": "string"
+                },
+                {
+                    "name": "my_url",
+                    "type": "string"
+                }
+            ],
+            "name": "joycexu_access_0404"
+        },
+        {
+            "fields": [
+                {
+                    "name": "my_",
+                    "type": "string"
+                },
+                {
+                    "name": "my_http",
+                    "type": "string"
+                },
+                {
+                    "name": "my_ip",
+                    "type": "string"
+                },
+                {
+                    "name": "my_log",
+                    "type": "string"
+                },
+                {
+                    "name": "my_method",
+                    "type": "string"
+                },
+                {
+                    "name": "my_number",
+                    "type": "string"
+                },
+                {
+                    "name": "my_returncode",
+                    "type": "string"
+                },
+                {
+                    "name": "my_time",
+                    "type": "string"
+                },
+                {
+                    "name": "my_url",
+                    "type": "string"
+                }
+            ],
+            "name": "lanshen_apache"
+        },
+        {
+            "fields": [
+                {
+                    "name": "dt",
+                    "type": "string"
+                },
+                {
+                    "name": "id",
+                    "type": "int"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                }
+            ],
+            "name": "test_table_ext"
+        },
+        {
+            "fields": [
+                {
+                    "name": "my_",
+                    "type": "string"
+                },
+                {
+                    "name": "my_http",
+                    "type": "string"
+                },
+                {
+                    "name": "my_ip",
+                    "type": "string"
+                },
+                {
+                    "name": "my_log",
+                    "type": "string"
+                },
+                {
+                    "name": "my_method",
+                    "type": "string"
+                },
+                {
+                    "name": "my_number",
+                    "type": "string"
+                },
+                {
+                    "name": "my_returncode",
+                    "type": "string"
+                },
+                {
+                    "name": "my_time",
+                    "type": "string"
+                },
+                {
+                    "name": "my_url",
+                    "type": "string"
+                }
+            ],
+            "name": "default_dsid"
+        },
+        {
+            "fields": [
+                {
+                    "name": "cid",
+                    "type": "string"
+                },
+                {
+                    "name": "ckid",
+                    "type": "string"
+                },
+                {
+                    "name": "user_id",
+                    "type": "int"
+                },
+                {
+                    "name": "username",
+                    "type": "string"
+                }
+            ],
+            "name": "test_create2"
+        },
+        {
+            "fields": [
+                {
+                    "name": "c1",
+                    "type": "string"
+                }
+            ],
+            "name": "test_monitor1"
+        },
+        {
+            "fields": [
+                {
+                    "name": "my_http",
+                    "type": "string"
+                },
+                {
+                    "name": "my_ip",
+                    "type": "string"
+                },
+                {
+                    "name": "my_method",
+                    "type": "string"
+                },
+                {
+                    "name": "my_number",
+                    "type": "string"
+                },
+                {
+                    "name": "my_returncode",
+                    "type": "string"
+                },
+                {
+                    "name": "my_time",
+                    "type": "string"
+                },
+                {
+                    "name": "my_url",
+                    "type": "string"
+                }
+            ],
+            "name": "lnyd_apache"
+        },
+        {
+            "fields": [
+                {
+                    "name": "dt",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                }
+            ],
+            "name": "partition_test"
+        },
+        {
+            "fields": [
+                {
+                    "name": "c1",
+                    "type": "string"
+                },
+                {
+                    "name": "c2",
+                    "type": "string"
+                },
+                {
+                    "name": "c3",
+                    "type": "string"
+                },
+                {
+                    "name": "c4",
+                    "type": "string"
+                },
+                {
+                    "name": "c5",
+                    "type": "string"
+                },
+                {
+                    "name": "c6",
+                    "type": "string"
+                },
+                {
+                    "name": "c7",
+                    "type": "string"
+                },
+                {
+                    "name": "ip",
+                    "type": "string"
+                }
+            ],
+            "name": "defaultdsid_1"
+        },
+        {
+            "fields": [
+                {
+                    "name": "axis_num",
+                    "type": "double"
+                },
+                {
+                    "name": "axistype",
+                    "type": "string"
+                },
+                {
+                    "name": "computestation",
+                    "type": "string"
+                },
+                {
+                    "name": "dealstatus",
+                    "type": "string"
+                },
+                {
+                    "name": "distance",
+                    "type": "double"
+                },
+                {
+                    "name": "entry_network",
+                    "type": "string"
+                },
+                {
+                    "name": "entry_station",
+                    "type": "string"
+                },
+                {
+                    "name": "entry_time",
+                    "type": "string"
+                },
+                {
+                    "name": "etcflag",
+                    "type": "string"
+                },
+                {
+                    "name": "exit_network",
+                    "type": "string"
+                },
+                {
+                    "name": "exit_station",
+                    "type": "string"
+                },
+                {
+                    "name": "exit_time",
+                    "type": "string"
+                },
+                {
+                    "name": "flagstation",
+                    "type": "string"
+                },
+                {
+                    "name": "jzxflag",
+                    "type": "string"
+                },
+                {
+                    "name": "overload_rate",
+                    "type": "double"
+                },
+                {
+                    "name": "recordtype",
+                    "type": "string"
+                },
+                {
+                    "name": "tailnum",
+                    "type": "string"
+                },
+                {
+                    "name": "total_weight",
+                    "type": "double"
+                },
+                {
+                    "name": "totalweightlimit",
+                    "type": "string"
+                },
+                {
+                    "name": "vehicle_class",
+                    "type": "string"
+                },
+                {
+                    "name": "vehicle_id",
+                    "type": "string"
+                },
+                {
+                    "name": "vehicle_type",
+                    "type": "string"
+                }
+            ],
+            "name": "joycexu_jiaotong_040407"
+        },
+        {
+            "fields": [
+                {
+                    "name": "age",
+                    "type": "int"
+                },
+                {
+                    "name": "day",
+                    "type": "string"
+                },
+                {
+                    "name": "fenshu",
+                    "type": "int"
+                },
+                {
+                    "name": "mail",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "sex",
+                    "type": "string"
+                }
+            ],
+            "name": "huizi_hive02"
+        },
+        {
+            "fields": [
+                {
+                    "name": "c1",
+                    "type": "string"
+                },
+                {
+                    "name": "c2",
+                    "type": "int"
+                },
+                {
+                    "name": "c3",
+                    "type": "string"
+                },
+                {
+                    "name": "c4",
+                    "type": "string"
+                },
+                {
+                    "name": "c5",
+                    "type": "string"
+                },
+                {
+                    "name": "c6",
+                    "type": "int"
+                }
+            ],
+            "name": "test_mc_stu"
+        },
+        {
+            "fields": [
+                {
+                    "name": "my_",
+                    "type": "string"
+                },
+                {
+                    "name": "my_http",
+                    "type": "string"
+                },
+                {
+                    "name": "my_ip",
+                    "type": "string"
+                },
+                {
+                    "name": "my_log",
+                    "type": "string"
+                },
+                {
+                    "name": "my_method",
+                    "type": "string"
+                },
+                {
+                    "name": "my_number",
+                    "type": "string"
+                },
+                {
+                    "name": "my_returncode",
+                    "type": "string"
+                },
+                {
+                    "name": "my_time",
+                    "type": "string"
+                },
+                {
+                    "name": "my_url",
+                    "type": "string"
+                }
+            ],
+            "name": "default_198"
+        },
+        {
+            "fields": [
+                {
+                    "name": "age",
+                    "type": "int"
+                },
+                {
+                    "name": "day",
+                    "type": "string"
+                },
+                {
+                    "name": "fenshu",
+                    "type": "int"
+                },
+                {
+                    "name": "mail",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "sex",
+                    "type": "string"
+                }
+            ],
+            "name": "huizi_hive01"
+        },
+        {
+            "fields": [
+                {
+                    "name": "axis_num",
+                    "type": "double"
+                },
+                {
+                    "name": "axistype",
+                    "type": "int"
+                },
+                {
+                    "name": "computestation",
+                    "type": "int"
+                },
+                {
+                    "name": "dealstatus",
+                    "type": "int"
+                },
+                {
+                    "name": "distance",
+                    "type": "double"
+                },
+                {
+                    "name": "entry_network",
+                    "type": "string"
+                },
+                {
+                    "name": "entry_station",
+                    "type": "string"
+                },
+                {
+                    "name": "entry_time",
+                    "type": "string"
+                },
+                {
+                    "name": "etcflag",
+                    "type": "int"
+                },
+                {
+                    "name": "exit_network",
+                    "type": "string"
+                },
+                {
+                    "name": "exit_station",
+                    "type": "string"
+                },
+                {
+                    "name": "exit_time",
+                    "type": "string"
+                },
+                {
+                    "name": "flagstation",
+                    "type": "int"
+                },
+                {
+                    "name": "jzxflag",
+                    "type": "int"
+                },
+                {
+                    "name": "overload_rate",
+                    "type": "double"
+                },
+                {
+                    "name": "recordtype",
+                    "type": "int"
+                },
+                {
+                    "name": "tailnum",
+                    "type": "int"
+                },
+                {
+                    "name": "total_weight",
+                    "type": "double"
+                },
+                {
+                    "name": "totalweightlimit",
+                    "type": "int"
+                },
+                {
+                    "name": "vehicle_class",
+                    "type": "string"
+                },
+                {
+                    "name": "vehicle_id",
+                    "type": "string"
+                },
+                {
+                    "name": "vehicle_type",
+                    "type": "string"
+                }
+            ],
+            "name": "jiaotong_1mb"
+        },
+        {
+            "fields": [
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "type",
+                    "type": "string"
+                },
+                {
+                    "name": "value",
+                    "type": "int"
+                }
+            ],
+            "name": "testhive"
+        },
+        {
+            "fields": [
+                {
+                    "name": "my_",
+                    "type": "string"
+                },
+                {
+                    "name": "my_http",
+                    "type": "string"
+                },
+                {
+                    "name": "my_ip",
+                    "type": "string"
+                },
+                {
+                    "name": "my_log",
+                    "type": "string"
+                },
+                {
+                    "name": "my_method",
+                    "type": "string"
+                },
+                {
+                    "name": "my_number",
+                    "type": "string"
+                },
+                {
+                    "name": "my_returncode",
+                    "type": "string"
+                },
+                {
+                    "name": "my_time",
+                    "type": "string"
+                },
+                {
+                    "name": "my_url",
+                    "type": "string"
+                }
+            ],
+            "name": "lanshen_local"
+        },
+        {
+            "fields": [
+                {
+                    "name": "c1",
+                    "type": "string"
+                },
+                {
+                    "name": "c10",
+                    "type": "string"
+                },
+                {
+                    "name": "c11",
+                    "type": "string"
+                },
+                {
+                    "name": "c12",
+                    "type": "string"
+                },
+                {
+                    "name": "c13",
+                    "type": "string"
+                },
+                {
+                    "name": "c14",
+                    "type": "string"
+                },
+                {
+                    "name": "c15",
+                    "type": "string"
+                },
+                {
+                    "name": "c16",
+                    "type": "string"
+                },
+                {
+                    "name": "c17",
+                    "type": "string"
+                },
+                {
+                    "name": "c18",
+                    "type": "string"
+                },
+                {
+                    "name": "c19",
+                    "type": "string"
+                },
+                {
+                    "name": "c2",
+                    "type": "string"
+                },
+                {
+                    "name": "c20",
+                    "type": "string"
+                },
+                {
+                    "name": "c21",
+                    "type": "string"
+                },
+                {
+                    "name": "c22",
+                    "type": "string"
+                },
+                {
+                    "name": "c3",
+                    "type": "string"
+                },
+                {
+                    "name": "c4",
+                    "type": "string"
+                },
+                {
+                    "name": "c5",
+                    "type": "string"
+                },
+                {
+                    "name": "c6",
+                    "type": "string"
+                },
+                {
+                    "name": "c7",
+                    "type": "string"
+                },
+                {
+                    "name": "c8",
+                    "type": "string"
+                },
+                {
+                    "name": "c9",
+                    "type": "string"
+                }
+            ],
+            "name": "jiaotong_joycexu_0404"
+        },
+        {
+            "fields": [
+                {
+                    "name": "cid",
+                    "type": "string"
+                },
+                {
+                    "name": "ckid",
+                    "type": "string"
+                },
+                {
+                    "name": "user_id",
+                    "type": "int"
+                },
+                {
+                    "name": "username",
+                    "type": "string"
+                }
+            ],
+            "name": "user_info123"
+        },
+        {
+            "fields": [
+                {
+                    "name": "age",
+                    "type": "int"
+                },
+                {
+                    "name": "day",
+                    "type": "bigint"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "number",
+                    "type": "int"
+                },
+                {
+                    "name": "sex",
+                    "type": "string"
+                },
+                {
+                    "name": "smail",
+                    "type": "string"
+                }
+            ],
+            "name": "gaojing"
+        },
+        {
+            "fields": [
+                {
+                    "name": "my_",
+                    "type": "string"
+                },
+                {
+                    "name": "my_http",
+                    "type": "string"
+                },
+                {
+                    "name": "my_ip",
+                    "type": "string"
+                },
+                {
+                    "name": "my_log",
+                    "type": "string"
+                },
+                {
+                    "name": "my_method",
+                    "type": "string"
+                },
+                {
+                    "name": "my_number",
+                    "type": "string"
+                },
+                {
+                    "name": "my_returncode",
+                    "type": "string"
+                },
+                {
+                    "name": "my_time",
+                    "type": "string"
+                },
+                {
+                    "name": "my_url",
+                    "type": "string"
+                }
+            ],
+            "name": "logstash_joycexu"
+        },
+        {
+            "fields": [
+                {
+                    "name": "cid",
+                    "type": "string"
+                },
+                {
+                    "name": "ckid",
+                    "type": "string"
+                },
+                {
+                    "name": "user_id",
+                    "type": "int"
+                },
+                {
+                    "name": "username",
+                    "type": "string"
+                }
+            ],
+            "name": "test_create"
+        }
+    ]
+}

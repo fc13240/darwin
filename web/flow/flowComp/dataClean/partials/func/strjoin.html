@@ -1,0 +1,42 @@
+<div id="otherConfig">
+	<style type="text/css">
+		#srclb,#dstlb{border:1px solid #aaa;width:200px;height:195px;}
+		.to{width:30px;}
+	</style>
+	<div class="form-group">
+    	<label class="col-sm-3 control-label">所属数据：</label>
+    	<div class="col-sm-6">
+    		<select class="form-control" ng-init="vcolItem.data=vcolItem.data||inputinfos[0].dataName" ng-model="vcolItem.data">
+				<option value="{{input.dataName}}" ng-selected="input.dataName==vcolItem.data" ng-repeat="input in inputinfos">{{input.dataName}}</option>
+			</select>
+    	</div>
+  	</div>
+ 	<div class="form-group">
+    	<label class="col-sm-3 control-label"><span class="redStar">*&nbsp;</span>新列名称：</label>
+    	<div class="col-sm-6">
+      		<input type="text" name="colName" class="form-control" ng-model="vcolItem.colName" ng-init="vcolItem.colName=vcolItem.colName" data-rule="required" placeholder="新列名称" ng-blur="isExist(vcolItem.colName)"/>
+    	</div>
+      <input id="newCol" type="hidden" value="{{vcolItem.colName}}" >
+  	</div>
+  	<!-- 
+  	<div class="form-group">
+    	<label for="hdfsname" class="col-sm-3 control-label">参数赋值：</label>
+  	</div>
+  	 -->
+  	<div class="form-group">
+    	<label for="hdfspath" class="col-sm-3 control-label">连接符：</label>
+    	<div class="col-sm-6">
+      		<input type="text" name="vcolItem" ng-trim="false" class="form-control" ng-model="vcolItem.args[0].value" ng-init="param=vcolItem.args[0]||{type:'string',desc:'连接符',value:''};vcolItem.args[0]=param"  placeholder="连接符"/>
+    	</div>
+  	</div>
+  	<div class="form-group">
+    	<label class="col-sm-3 control-label">列集合：</label>
+  	</div>
+  	<div class="form-group">
+    	<label for="hdfspath" class="col-sm-3 control-label"></label>
+    	<div class="col-sm-10" ng-init="rightData=(vcolItem.args[1].value|explode:',')">
+            <select-choice select-left-data-model="srclbList" select-right-return-all-data="vcolItem.args[1].value" select-right-data-model="rightData"></select-choice>
+			<input type="hidden" ng-init="param=vcolItem.args[1]||{type:'fieldlist',desc:'列集合',value:''};vcolItem.args[1]=param;"/>
+    	</div>
+  	</div>
+</div>

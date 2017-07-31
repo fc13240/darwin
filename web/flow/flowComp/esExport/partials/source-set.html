@@ -1,0 +1,41 @@
+<div class="panel panel-darwin">
+
+
+	<div style="border:1px solid #ccc;" class="panel-heading">
+		<div style="width:50%;float:left;">索引配置</div>
+		
+		<div style="clear: both;"></div>
+	</div>
+	
+	<div class="panel-body">
+		<div class="form-group">
+			<div class="col-sm-5">
+			  <input id="singleIndex" ng-model="inputinfo.index_type" name="timeFormat" type="radio" value="1" checked="checked" ng-click="getsingleIndex();">单个索引
+		    </div>
+			<div class="col-sm-7">
+			  <input id="timeIndex"  ng-model="inputinfo.index_type" name="timeFormat" type="radio" value="2" ng-click="getTimeIndex();">时间段内索引
+		    </div>
+		</div>
+		<div class="form-group">
+			<label for="selectindex" class="control-label"><span class="redStar">*&nbsp;</span>索引</label>
+			<div>
+				<input ng-change="selectValidator()" ng-blur="selectValidator()" ng-model="inputinfo.index_name" class="form-control input-inline" placeholder="{{showInfo}}" id="selectindex" name="selectindex" data-rule='required;esSingleFormat;length[1~40]' >
+			</div>
+		</div>
+		<div id="timeIndexShow" style="display:none">
+			<div class="form-group">
+				<label for="begintime" class="control-label"><span class="redStar">*&nbsp;</span>开始时间</label>
+				<div>
+					<input ng-change="validateTime()" ng-model="inputinfo.start_time" class="form-control input-inline" placeholder="开始时间" id="begintime" name="begintime">
+				</div>
+			</div>
+	        <div class="form-group">
+				<label for="endtime" class="control-label"><span class="redStar">*&nbsp;</span>结束时间</label>
+				<div>
+					<input ng-change="validateTime()" ng-model="inputinfo.end_time"  class="form-control input-inline" placeholder="结束时间" id="endtime" name="endtime" />
+				</div>
+			</div>
+        </div>
+
+	</div>
+</div>

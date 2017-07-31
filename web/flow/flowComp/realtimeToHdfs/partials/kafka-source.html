@@ -1,0 +1,28 @@
+<div ng-init="inputinfo=modelVal;index=$index" id="connModal" class="margin">
+	
+	<div class="row">
+		<div class="form-group">
+			<label for="hdfsname" class="col-sm-2 control-label"><span class="redStar">*&nbsp;</span>kafka主题:</label>
+	    	<div class="col-sm-9">
+	      		<input type="text" id="kafkaTheme" name="kafkaTheme" class="form-control 1" tooltip={{inputinfo.topic}}  ng-model="inputinfo.topic" value="{{inputinfo.topic}}" placeholder="kafka主题" data-rule="required;" style="margin-left:-20px" />
+	    	</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="form-group">
+			<label for="hdfsname" class="col-sm-2 control-label">消费者标识:</label>
+			<div class="col-sm-5">
+				<input id="consumerId" type="text" name="sourceType" class="form-control" ng-model="inputinfo.consumerId" value="{{inputinfo.consumerId}}" placeholder="消费者标识" style="margin-left:-20px" />
+			</div>
+			<div class="col-sm-2">
+	    	<div  class="glyphicon glyphicon-question-sign propmt" data-toggle="tooltip" ng-mouseenter="mouseenter()" data-content='相同topic的使用同一个消费者标志可以并发从kafka读取数据(该topic的数据存在不同分区中)' style="margin-top:13px;margin-left:-110px" ></div>	
+	    </div>
+		</div>
+	</div>
+	
+</div>	
+	
+
+	
+

@@ -1,0 +1,24 @@
+<div ng-controller="marklinemap" ng-init="init()"><style>.countries {
+	  fill: #000;
+	  stroke: #ffffff;
+	  stroke-width: 0.5px;
+	  stroke-linecap: round;
+	  stroke-linejoin: round;
+	  vector-effect: non-scaling-stroke;
+	}
+	.points {
+	  fill: #036;
+	  stroke: #6cb0e0;
+	  stroke-width: 0.5px;
+	  stroke-linecap: round;
+	  stroke-linejoin: round;
+	  vector-effect: non-scaling-stroke;
+	}
+	.route {
+	  fill: none;
+	  stroke-width: 0;
+	}
+	.something {
+	  fill: #fff;
+	  stroke-width: 0;
+	}</style><div id="marklinemap" marklinemap="" params="{{panel}}" ng-style="{height:panel.height||row.height}"></div></div>

@@ -1,0 +1,245 @@
+{
+    "took": 192,
+    "timed_out": false,
+    "_shards": {
+        "total": 25,
+        "successful": 25,
+        "failed": 0
+    },
+    "hits": {
+        "total": 40945811,
+        "max_score": 1,
+        "hits": [
+            {
+                "_index": "es_index_demouser",
+                "_type": "apachelog",
+                "_id": "fCNfyASQSb2OqLhYpPtETg",
+                "_score": 1,
+                "_source": {
+                    "@lineId": 1433335900050000,
+                    "@uid": "14",
+                    "_type": "apachelog",
+                    "@insId": 1047,
+                    "@hostname": "localhost",
+                    "@size": 92,
+                    "ip": "117.38.236.120",
+                    "time": "2015-04-30T22:48:40.000+08:00",
+                    "method": "POST",
+                    "url": "/default/tmall/cmsave",
+                    "http": "HTTP/1.1",
+                    "returncode": "200",
+                    "size": "65",
+                    "@timestamp": "2015-04-30T22:48:40.000+08:00",
+                    "@period": "20150603_205250"
+                }
+            },
+            {
+                "_index": "es_index_demouser",
+                "_type": "apachelog",
+                "_id": "Pljf9ztqSwKQQT-4uulJ9g",
+                "_score": 1,
+                "_source": {
+                    "@lineId": 1433335900050000,
+                    "@uid": "14",
+                    "_type": "apachelog",
+                    "@insId": 1047,
+                    "@hostname": "localhost",
+                    "@size": 90,
+                    "ip": "111.194.247.122",
+                    "time": "2015-04-30T22:48:37.000+08:00",
+                    "method": "POST",
+                    "url": "/default/jd/cmsave",
+                    "http": "HTTP/1.1",
+                    "returncode": "200",
+                    "size": "64",
+                    "@timestamp": "2015-04-30T22:48:37.000+08:00",
+                    "@period": "20150603_205250"
+                }
+            },
+            {
+                "_index": "es_index_demouser",
+                "_type": "apachelog",
+                "_id": "gWNZJF-jRDKzV3y8ilzWYw",
+                "_score": 1,
+                "_source": {
+                    "@lineId": 1433335900050000,
+                    "@uid": "14",
+                    "_type": "apachelog",
+                    "@insId": 1047,
+                    "@hostname": "localhost",
+                    "@size": 96,
+                    "ip": "58.56.110.75",
+                    "time": "2015-04-30T22:48:50.000+08:00",
+                    "method": "POST",
+                    "url": "/default/index/cmanaresjson",
+                    "http": "HTTP/1.1",
+                    "returncode": "200",
+                    "size": "96",
+                    "@timestamp": "2015-04-30T22:48:50.000+08:00",
+                    "@period": "20150603_205250"
+                }
+            },
+            {
+                "_index": "es_index_demouser",
+                "_type": "apachelog",
+                "_id": "wfeDl_x9RZOgtD92OR_PJQ",
+                "_score": 1,
+                "_source": {
+                    "@lineId": 1433335900050000,
+                    "@uid": "14",
+                    "_type": "apachelog",
+                    "@insId": 1047,
+                    "@hostname": "localhost",
+                    "@size": 90,
+                    "ip": "111.194.247.122",
+                    "time": "2015-04-30T22:48:48.000+08:00",
+                    "method": "POST",
+                    "url": "/default/jd/cmsave",
+                    "http": "HTTP/1.1",
+                    "returncode": "200",
+                    "size": "65",
+                    "@timestamp": "2015-04-30T22:48:48.000+08:00",
+                    "@period": "20150603_205250"
+                }
+            },
+            {
+                "_index": "es_index_demouser",
+                "_type": "apachelog",
+                "_id": "ZYza6SyYRHO42_dm_6yJdA",
+                "_score": 1,
+                "_source": {
+                    "@lineId": 1433335900050000,
+                    "@uid": "14",
+                    "_type": "apachelog",
+                    "@insId": 1047,
+                    "@hostname": "localhost",
+                    "@size": 137,
+                    "ip": "117.38.236.120",
+                    "time": "2015-04-30T22:49:05.000+08:00",
+                    "method": "GET",
+                    "url": "/default/index/cmanaresv2?itemid=ed8e25502176a78b110061c6044216b3",
+                    "http": "HTTP/1.1",
+                    "returncode": "200",
+                    "size": "5958",
+                    "@timestamp": "2015-04-30T22:49:05.000+08:00",
+                    "@period": "20150603_205250"
+                }
+            },
+            {
+                "_index": "es_index_demouser",
+                "_type": "apachelog",
+                "_id": "5kQq5WnRSSG1F6phayqUwQ",
+                "_score": 1,
+                "_source": {
+                    "@lineId": 1433335900050000,
+                    "@uid": "14",
+                    "_type": "apachelog",
+                    "@insId": 1047,
+                    "@hostname": "localhost",
+                    "@size": 90,
+                    "ip": "111.194.247.122",
+                    "time": "2015-04-30T22:48:58.000+08:00",
+                    "method": "POST",
+                    "url": "/default/jd/cmsave",
+                    "http": "HTTP/1.1",
+                    "returncode": "200",
+                    "size": "64",
+                    "@timestamp": "2015-04-30T22:48:58.000+08:00",
+                    "@period": "20150603_205250"
+                }
+            },
+            {
+                "_index": "es_index_demouser",
+                "_type": "apachelog",
+                "_id": "agMiMCdxS5uyOLyWMKfIZA",
+                "_score": 1,
+                "_source": {
+                    "@lineId": 1433335900050000,
+                    "@uid": "14",
+                    "_type": "apachelog",
+                    "@insId": 1047,
+                    "@hostname": "localhost",
+                    "@size": 92,
+                    "ip": "117.38.236.120",
+                    "time": "2015-04-30T22:49:11.000+08:00",
+                    "method": "POST",
+                    "url": "/default/tmall/cmsave",
+                    "http": "HTTP/1.1",
+                    "returncode": "200",
+                    "size": "64",
+                    "@timestamp": "2015-04-30T22:49:11.000+08:00",
+                    "@period": "20150603_205250"
+                }
+            },
+            {
+                "_index": "es_index_demouser",
+                "_type": "apachelog",
+                "_id": "82Dr11k_T-CKruRi_Vf3Rg",
+                "_score": 1,
+                "_source": {
+                    "@lineId": 1433335900050000,
+                    "@uid": "14",
+                    "_type": "apachelog",
+                    "@insId": 1047,
+                    "@hostname": "localhost",
+                    "@size": 90,
+                    "ip": "111.194.247.122",
+                    "time": "2015-04-30T22:49:04.000+08:00",
+                    "method": "POST",
+                    "url": "/default/jd/cmsave",
+                    "http": "HTTP/1.1",
+                    "returncode": "200",
+                    "size": "65",
+                    "@timestamp": "2015-04-30T22:49:04.000+08:00",
+                    "@period": "20150603_205250"
+                }
+            },
+            {
+                "_index": "es_index_demouser",
+                "_type": "apachelog",
+                "_id": "TjAmwyJISpmBTWWWvBSgfA",
+                "_score": 1,
+                "_source": {
+                    "@lineId": 1433335900050000,
+                    "@uid": "14",
+                    "_type": "apachelog",
+                    "@insId": 1047,
+                    "@hostname": "localhost",
+                    "@size": 90,
+                    "ip": "111.194.247.122",
+                    "time": "2015-04-30T22:49:09.000+08:00",
+                    "method": "POST",
+                    "url": "/default/jd/cmsave",
+                    "http": "HTTP/1.1",
+                    "returncode": "200",
+                    "size": "64",
+                    "@timestamp": "2015-04-30T22:49:09.000+08:00",
+                    "@period": "20150603_205250"
+                }
+            },
+            {
+                "_index": "es_index_demouser",
+                "_type": "apachelog",
+                "_id": "JuFE70tcSM2-sg3lP7a0kQ",
+                "_score": 1,
+                "_source": {
+                    "@lineId": 1433335900050000,
+                    "@uid": "14",
+                    "_type": "apachelog",
+                    "@insId": 1047,
+                    "@hostname": "localhost",
+                    "@size": 90,
+                    "ip": "111.194.247.122",
+                    "time": "2015-04-30T22:49:15.000+08:00",
+                    "method": "POST",
+                    "url": "/default/jd/cmsave",
+                    "http": "HTTP/1.1",
+                    "returncode": "200",
+                    "size": "64",
+                    "@timestamp": "2015-04-30T22:49:15.000+08:00",
+                    "@period": "20150603_205250"
+                }
+            }
+        ]
+    }
+}

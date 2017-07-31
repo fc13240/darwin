@@ -1,0 +1,28 @@
+<html>
+<head>
+</head>
+<body>
+
+<div id="meterChart" style="width:200;height:200;"></div>
+
+<script src="/resources/vis/jquery-1.11.1.min.js"></script>
+<script src="/resources/vis/d3.min.js"></script>
+<script src="/resources/vis/darwinvis.js"></script>
+<script src="/resources/vis/d3wordcloud/d3.cloud.js"></script>
+<script src="/resources/vis/d3wordcloud/darwinwordcloud.js"></script>
+<script>
+var domid = "meterChart";
+var data = [{key:'xjj',value:12},{key:'zjh',value:12},{key:'zlh',value:12}];
+var graph = new DarwinWordcloud(domid, data);
+
+var width = 800;
+var height = 600;//auto
+var options = {
+		"header.title.text":"Top 15 Fears",
+		"header.subtitle.text":"What strikes the most terror in people?",
+};
+graph.draw(width, height, options);
+</script>
+
+</body>
+</html>

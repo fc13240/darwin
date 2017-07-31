@@ -1,0 +1,26 @@
+<div class="panel panel-darwin">
+	<div style="border:1px solid #ccc;" class="panel-heading">
+		处理过程
+	</div>
+	
+	<div class="panel-body">
+		<div class="form-group">
+			<div class="col-sm-12">
+			  <input  name="exportType" type="checkbox" ng-model="inputinfo.compress" checked="checked">压缩导出
+		    </div>
+			<div class="col-sm-12">
+			  <input   name="exportType" type="checkbox" ng-model="inputinfo.delete" checked="checked">导出后删除原索引
+		    </div>
+		</div>
+		<div class="col-sm-12">
+			导出字段：
+			<select class="form-control ng-pristine ng-valid ng-touched" style="height:30px;border-radius: 12px;background-color:#F5F8F8;" ng-model="inputinfo.fields">
+				<option  value="{{item.value}}" ng-selected="item.value==inputinfo.fields" ng-repeat="item in conType">{{item.text}}</option>
+					
+			</select>
+		</div>
+		
+
+
+	</div>
+</div>

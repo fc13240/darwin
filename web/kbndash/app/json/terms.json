@@ -1,0 +1,16 @@
+{
+     "hits": {
+        "total": 134926164,
+        "max_score": 0,
+        "hits": []
+    },
+    "facets": {
+        "terms": {
+            "_type": "terms",
+            "missing": 52745348,
+            "total": 0,
+            "other": 0,
+            "terms": []
+        }
+    }
+}

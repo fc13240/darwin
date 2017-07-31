@@ -1,0 +1,61 @@
+<div class="panel panel-darwin">
+	<div style="border:1px solid #ccc;" class="panel-heading">
+		处理配置
+	</div>
+	<div>
+		<div class="text-right">
+			<a class="btn btn-xs btn-default" ng-click="addAggregate()"><span class="glyphicon glyphicon-plus"></span>添加运算字段</a>
+		</div>				
+	</div>
+	<table  class="table table-condensed">
+				<tbody>
+					<tr ng-repeat="agg in cleancompConfig.config.filterDetail">
+						<td>
+							<div>
+								Fel表达式：
+								<div class="glyphicon glyphicon-question-sign propmt" data-toggle="tooltip" ng-mouseenter="mouseenter()" data-content='1、Concat(A, ",", B)    把字段A与字段B用逗号拼接&lt;/br&gt;2、IndexOf(A, "E")字段A中E的出现位置&lt;/br&gt;3、Replace(A, "E", "P")把字段A中的E替换成P&lt;/br&gt;4、SubString(A, 3)      字符串截取
+'
+ style="margin-top:13px;"></div>
+		    	            </div>
+								<input class="form-control" ng-change="generateField(agg.expr,$index)" ng-model="agg.expr" style="height:30px"/></br>
+
+								<div class="row">
+								    <!-- {{agg.resultArr}} -->
+									<div class="col-sm-6" >
+										类型：
+										<div ng-repeat="resArr in agg.resultArr">
+											<select class="form-control" ng-model="resArr.type"  style="height:30px;width:125px;border-radius: 12px;background-color:#F5F8F8;">
+												<option ng-selected="item.value==resArr.type" value="{{item.value}}" ng-repeat="item in conType" >
+													{{item.text}}</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-sm-6" >
+										结果命名：
+										<div ng-repeat="resArr in agg.resultArr">
+										    <input class="form-control" ng-model="resArr.resultName"  style="height:30px"/>
+										</div>
+									</div>
+
+
+									<div class="col-sm-12"  ng-repeat="resArr in agg.resultArr">
+										<span ng-if="resArr.type==='datetime'">时间格式：</span>
+										<input  ng-if="resArr.type==='datetime'" class="form-control" ng-model="resArr.dateFormat" style="height:30px" />
+									</div>
+
+								</div>
+								
+								
+								
+							</div>
+						</td>
+						<td>
+
+							<a ng-click="removeAggregate($index)" title="删除" class="text-danger"><span class="glyphicon glyphicon-trash"></span></a>
+							<!-- <a  ng-click="generateField(agg.expr,$index)" title="新增"><span style="margin-top:15px" class="glyphicon glyphicon-plus"></span></a> -->
+
+						</td>
+					</tr>
+				</tbody>
+			</table>
+</div>

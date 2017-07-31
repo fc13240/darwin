@@ -1,0 +1,43 @@
+{
+	"columns": [{
+		"desc": "",
+		"name": "yimr_date",
+		"type": "String",
+		"kvMainId":12
+	},
+	{
+		"desc": "",
+		"name": "yimr_time",
+		"type": "String"
+	},
+	{
+		"desc": "",
+		"name": "yimr_info",
+		"type": "String"
+	},
+	{
+		"desc": "",
+		"name": "yimr_Thread",
+		"type": "String"
+	},
+	{
+		"desc": "",
+		"name": "yimr_javaid",
+		"type": "String"
+	},
+	{
+		"desc": "",
+		"name": "yimr_Proxy",
+		"type": "String"
+	},
+	{
+		"desc": "",
+		"name": "yimr_ProxyThr",
+		"type": "String"
+	}],
+	"delimited": "\\[(.*) (.*)\\]\\[(.*)\\]\\[(.*)\\]\\((.*)\\)\\$ \\[(.*) (.*)\\] .* .* .* .*\\:\\[\\{.*\\}\\]",
+	"delimited_type": "REGX",
+	"line": "false",
+	"lineReg": "",
+	"newLine": "\\n"
+}

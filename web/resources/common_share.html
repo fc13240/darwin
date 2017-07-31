@@ -1,0 +1,44 @@
+<div>
+	<button code="save" type="button" disabled="disabled" id="common_share_buttonOne" name="common_share_buttonOne" class="btn btn-default btn-sm" data-toggle="modal"
+		data-target=".bs-example-modal-lg">资源分享</button>
+
+	<div id="myModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+		aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+
+				<div class="modal-header">
+			        <button code="save" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">资源分享</h4>
+			    </div>
+				
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<ul id="treeDemo_share" class="ztree"></ul>
+						</div>
+						<div class="col-md-8">
+							<!--<h3 style="font-size:18px;">资源分享</h3>-->
+							<!-- <div id="title2">{{title2}}</div> -->
+							<div class="radio" style="margin:10px;display:inline-block">
+								<label><input type="radio" ng-model="shareType" value="shareToOrg" checked="checked" />分享给选定的组织</label>
+							</div>
+							<div class="radio" style="margin:10px;display:inline-block">
+								<label><input type="radio" ng-model="shareType" value="shareToUsers" />分享给选定的用户
+								</label>
+							</div>
+							
+							<input code="save" id="shareBtn" type="button" value="分享" class="btn btn-success" ng-click="shareFunc()"/>
+							<hr>
+							<div>
+								<div ng-repeat="u in users" style="margin:10px;display:inline-block" class="checkbox"><label><input name="shareUser" type="checkbox" username="{{u.username}}" ng-checked="checkedAll" ng-disabled="disabledAll"/>{{u.nickname}}</label></div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,61 @@
+<div class="panel panel-darwin">
+	<div style="border:1px solid #ccc;" class="panel-heading">
+		<div style="width:50%;float:left;">获取设置</div>
+		<!-- <div style="width:50%;float:left;text-align:right;">
+			<a class="add-hdfs-source" ng-click="selectOneSourse()"><span class="glyphicon glyphicon-plus"></span></a>
+		</div> -->
+		<div style="clear: both;"></div>
+	</div>
+<!-- 	<div id="selectOneSourse" style="display:none">
+		<span  ng-click="addOneSourse('kafka主题')">kafka主题</span></br>
+	</div> -->
+	<div class="panel-body">
+		<div style="position:relative" class="box box-default">
+			<div class="box-heading">
+				kafka获取</br>
+				<div class="box-body" >
+					<span id="conn-count" >
+						<font size="2px">
+						{{cleancompConfig.inputinfo.topic}}
+					    </font>
+					</span>
+			    </div>
+				
+			</div>
+			<div>
+				<button type="button" class="btn btn-xs btn-default" ng-click="popup_setting()">
+					<span class="glyphicon glyphicon-cog"></span>设置
+				</button>
+			
+				<!-- <input type="checkbox" ng-model="showFormat[$index]">显示字段 -->
+			</div>
+			<!-- <div ng-show="showFormat[$index]" style="height:200px;overflow:auto;">
+				<table class="table table-condensed" >
+					<thead>
+						<tr>
+							<th class="text-center">
+								列名
+							</th>
+							<th class="text-center">
+								类型
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="colinfo in cleancompConfig.inputinfo.columns">
+							<td>
+								{{colinfo.column_name}}
+							</td>
+							<td>
+								{{colinfo.type_name}}
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div> -->
+            <modal modaltitle="获取设置" modalid="hdfs_source_modal">
+                <kafka-source model-val="cleancompConfig.inputinfo"></kafka-source>
+            </modal>
+		</div>
+	</div>
+</div>

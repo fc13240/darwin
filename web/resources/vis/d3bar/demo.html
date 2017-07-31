@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <script src="/resources/js/jquery-1.9.1.min.js"></script> -->
+<script src="/resources/vis/jquery-1.11.1.min.js"></script>
+<link type="text/css" href="/resources/vis/d3bar/darwinbar.css" rel="stylesheet" media="screen"/>
+<script src="/resources/vis/d3.min.js"></script>
+<script src="/resources/vis/d3bar/d3.tip.v0.6.3.js"></script>
+<script src="/resources/vis/darwinvis.js"></script>
+<script src="/resources/vis/d3bar/darwinbar.js"></script>
+</head>
+<body>
+<div id="barChart"></div>
+<script>
+$(function(){
+var domid = "barChart";
+
+var width = 960;
+var height = "";//auto
+var options = {
+		"header.title.text":"Lots of Programming Languages",
+		"style.bar.color":"orange",
+		"style.y.tip":"Frequence"
+};
+
+var data = [
+			{"label":"A", "value":.08167},
+			{"label":"B", "value":.01492},
+			{"label":"C", "value":.02780},
+			{"label":"D", "value":.04253},
+			{"label":"E", "value":.12702},
+			{"label":"F", "value":.02288},
+			{"label":"G", "value":.02022},
+			{"label":"H", "value":.06094},
+			{"label":"I", "value":.06973},
+			{"label":"J", "value":.00153},
+			{"label":"K", "value":.00747},
+			{"label":"L", "value":.04025},
+			{"label":"M", "value":.02517},
+			{"label":"N", "value":.06749},
+			{"label":"O", "value":.07507},
+			{"label":"P", "value":.01929},
+			{"label":"Q", "value":.00098},
+			{"label":"R", "value":.05987},
+			{"label":"S", "value":.06333},
+			{"label":"T", "value":.09056},
+			{"label":"U", "value":.02758},
+			{"label":"V", "value":.01037},
+			{"label":"W", "value":.02465},
+			{"label":"X", "value":.00150},
+			{"label":"Y", "value":.01971},
+			{"label":"Z", "value":.00074}
+];
+var bar = new DarwinBar(domid, data);
+bar.draw(width, height, options);
+});
+</script>
+</body>
+</html>

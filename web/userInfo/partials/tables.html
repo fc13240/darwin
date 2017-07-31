@@ -1,0 +1,15 @@
+<div>
+    <div class="box-element user-card">
+        <div class="view">
+            <div class="title">
+                <img src="userInfo/img/db.png"/>
+            </div>
+            <div class="content">
+                <div>
+                    <h6>大数据库空间
+                </div>
+                <div>{{tables.dbs.length || 0}}个表，共使用{{tables.dbs | sum:'usagekb' | bytesToSize}}</div>
+            </div>
+        </div>
+    </div>
+</div>

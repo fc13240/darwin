@@ -1,0 +1,40 @@
+.gauge .domain {
+    stroke-width: 2px;
+    stroke: orange;
+}
+
+.gauge .tick line {
+    stroke: orange;
+    stroke-width: 2px;
+}
+
+.gauge line {
+    stroke: orange;
+}
+
+.gauge .arc, .gauge .cursor {
+    opacity: 0;
+}
+
+.gauge .major {
+    fill: orange;
+    font-size: 20px;
+    font-family: 'Play', verdana, sans-serif;
+    font-weight: normal;
+}
+
+.gauge .indicator {
+    stroke: #EE3311;
+    fill: #000;
+    stroke-width: 4px;
+}
+
+/* css formats for the segment display */
+.segdisplay .on {
+    fill: #000;
+}
+
+.segdisplay .off {
+    fill: #000;
+    opacity: 0.15;
+}

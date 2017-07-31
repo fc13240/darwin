@@ -1,0 +1,87 @@
+<div class="panel panel-darwin">
+	<div style="border:1px solid #ccc;" class="panel-heading">
+		处理配置
+	</div>
+	<div>
+		<div class="text-right">
+			<a class="btn btn-xs btn-default" ng-click="popComputeField()"><span class="glyphicon glyphicon-plus"></span>添加运算字段</a>
+		</div>
+		<table  class="table table-condensed">
+			<!-- 
+			<thead>
+				<tr>
+					<th>
+						列名
+					</th>
+					<th>
+						类型
+					</th>
+					<th>
+						格式
+					</th>
+					<th>
+					</th>
+				</tr>
+			</thead>
+			 -->
+
+			<tbody>
+				<tr ng-repeat="vcol in cleancompConfig.config.vcol track by $index">
+					<td>
+						{{vcol.data}}.{{vcol.colName}}
+						<p>
+							函数:{{vcol.funcName}}
+						</p>
+						<p ng-repeat="arg in vcol.args track by $index">
+							<span>{{arg.desc}} : <span title="{{arg.value}}" style="max-width: 235px; text-overflow: ellipsis; display: inline-block; overflow: hidden;" class="label label-primary">{{arg.value}}</span></span>
+						</p>
+						<!-- <p>
+							映射失败默认值:{{vcol.defaultValue}}
+						</p> -->
+					</td>
+
+					<!-- 
+					<td>
+					</td>
+					<td>
+					</td>
+					 -->
+					<td>
+						<a ng-click="removeFunc($index)" title="删除" class="text-danger"><span class="glyphicon glyphicon-trash"></span></a>
+						<a ng-click="editFunc($index)" title="编辑"  class="text-danger"><span class="glyphicon glyphicon-edit"></span></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div>
+			<select class="form-control" ng-model="cleancompConfig.config.relation.type">
+				<option id="relationType" value="{{item.type}}" ng-selected="item.type==cleancompConfig.config.relation.type" ng-repeat="item in relationTypes">{{item.name}}</option>
+			</select>
+		</div>
+		<div ng-if="cleancompConfig.config.relation.type=='join' && cleancompConfig.inputinfo.length > 1">
+			<config-join cleancomp-config="cleancompConfig" join-types="joinTypes"></config-join>
+		</div>
+        <div ng-if="cleancompConfig.config.relation.type=='join' && cleancompConfig.inputinfo.length <= 1"style="color: red; text-align: center;">输入数据个数必须大于1</div>
+		<div>
+			<config-filter comp-config="cleancompConfig"></config-filter>
+		</div>
+	</div>
+	
+	<div class="modal fade bs-example-modal-lg" id="compute-field-setting" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ng-click="close()">&times;</span></button>
+					<h4 class="modal-title">添加运算字段</h4>
+				</div>
+				<div class="modal-body">
+					<config-field></config-field>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="close()">关闭</button>
+					<button type="button" class="btn btn-primary" ng-click="saveFunc()">保存</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,30 @@
+<div>
+    <div class="box-element user-card">
+        <div class="view">
+            <div class="title">
+                <img src="userInfo/img/contact-person.png"/>
+            </div>
+            <div class="content">
+                <div>
+                    <h6 titile="{{userinfo.realname}}">Hi,{{userinfo.shortname}}
+                </div>
+                <div>{{userinfo.email}}</div>
+                <div>共登录{{userinfo.logincount}}次</div>
+                <div ng-if="userinfo.logincount>1">
+                    <div>上次登录ip：{{userinfo.lastLoginIp}}</div>
+                    <div>上次登录时间：{{userinfo.lastLoginTime}}</div>
+                </div>
+                <div ng-if="userinfo.logincount==1">
+                    首次登录
+                </div>
+                <!-- <div>上次登录ip：{{userinfo.recent10login.ip}}</div>
+                <div>上次登录时间：{{userinfo.recent10login.time}}</div> -->
+                <!-- <div>共登录{{userinfo.logincount}}次，排名第{{userinfo.loginrank}}</div> -->
+                <!-- <div>
+                    <span><img src="userInfo/img/2.png"/></span>
+                    <span><img src="userInfo/img/edit.png"/></span>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>

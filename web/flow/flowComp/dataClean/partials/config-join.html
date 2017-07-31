@@ -1,0 +1,65 @@
+<div style="padding-right:30px;">
+	<div class="form-group">
+    	<div class="col-sm-10">
+    		<select id="config-join-left" ng-model="configJoinLeft" class="">
+    			<option ng-repeat="inputs in inputinfos" value="{{inputs.dataName}}">{{inputs.dataName}}</option>
+
+    		</select>
+    		<select id="config-join-op" class="">
+    			<option value="{{item.type}}" ng-repeat="item in joinTypes">{{item.name}}</option>
+    		</select>
+    		<select id="config-join-right" ng-model="configJoinRight">
+    			<option ng-repeat="inputs in inputinfos" ng-show="inputs.dataName !== configJoinLeft" value="{{inputs.dataName}}">{{inputs.dataName}}</option>
+    		</select>
+    	</div>
+    	<!-- 
+    	<div class="col-sm-2">
+    		<a class="text-success" ng-click="addJoin()">
+    			<span class="glyphicon glyphicon-plus"></span>
+			</a>
+    	</div>
+    	 -->
+  	</div>
+  	<div class="form-group">
+    	<div class="col-sm-10">
+    		<select id="config-cond-left" class="" style="width:200px">
+    			<option  ng-repeat="col in allCol(configJoinLeft) track by $index" value="{{col}}">{{col}}</option>
+    		</select>
+    		等于
+    		<select id="config-cond-right" style="width:200px">
+    			<option ng-repeat="col in allCol(configJoinRight) track by $index" value="{{col}}">{{col}}</option>
+    		</select>
+    	</div>
+    	<div class="col-sm-2">
+    		<a class="text-success" ng-click="addJoinCond()" data-toggle="tooltip" title="添加关联条件">
+    			<span class="glyphicon glyphicon-plus"></span>
+			</a>
+    	</div>
+  	</div>
+  	<div class="form-group">
+    	<div class="col-sm-10">
+      		<ul class="form-control" style="height: 75px;overflow: auto;" id="config-join-selected">
+   				<li class="relation label" style="cursor: context-menu;display: list-item;color: #34495e;font-size: 14px;" ng-repeat="rel in cleancompConfig.config.relation.joinDetail.relation" value="{{$index}}">
+				{{rel.op+'  '+rel.left+'  '+rel.right}}
+				</li>
+   			</ul>
+    	</div>
+    	<div class="col-sm-2">
+    		<a class="text-danger" ng-click="removeJoin()" title="删除选中的数据">
+    			<span class="glyphicon glyphicon-trash"></span>
+    		</a>
+    	</div>
+  	</div>
+  	<div class="form-group">
+    	<div class="col-sm-10">
+   			<ul id="conditions" class="form-control" style="height: 75px;overflow: auto;">
+   				<li class="condition label" style="cursor: context-menu;display: list-item;color: #34495e;font-size: 14px;" ng-repeat="(key,value) in conditions" value="{{key}}">{{value}}</li>
+   			</ul>
+    	</div>
+    	<div class="col-sm-2">
+    		<a class="text-danger" ng-click="removeJoinCond()" title="删除选中的连接条件">
+    			<span class="glyphicon glyphicon-trash"></span>
+    		</a>
+    	</div>
+  	</div>
+</div>

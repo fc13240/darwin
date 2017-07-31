@@ -1,0 +1,60 @@
+<div id="otherConfig">
+	<div class="form-group">
+    	<label class="col-sm-3 control-label">所属数据：</label>
+    	<div class="col-sm-6">
+    		<select class="form-control" ng-init="vcolItem.data=vcolItem.data||inputinfos[0].dataName" ng-model="vcolItem.data">
+				<option value="{{input.dataName}}" ng-selected="input.dataName==vcolItem.data" ng-repeat="input in inputinfos">{{input.dataName}}</option>
+			</select>
+    	</div>
+  	</div>
+	<div class="form-group">
+    	<label class="col-sm-3 control-label"><span class="redStar">*&nbsp;</span>新列名称：</label>
+    	<div class="col-sm-6">
+      		<input type="text"  name="colName" class="form-control" ng-model="vcolItem.colName" ng-init="vcolItem.colName=vcolItem.colName" placeholder="新列名称" date-rule="required" ng-blur="isExist(vcolItem.colName)"/>
+    	</div>
+      <input id="newCol" type="hidden" value="{{vcolItem.colName}}" >
+  	</div>
+  	<!-- 
+  	<div class="form-group">
+    	<label for="hdfsname" class="col-sm-3 control-label">参数赋值：</label>
+  	</div>
+  	 -->
+  	<div class="form-group">
+    	<label class="col-sm-3 control-label">待转换列：</label>
+    	<div class="col-sm-6">
+    		<textarea class="form-control" rows="8" ng-model="vcolItem.args[0].value" ng-init="param=vcolItem.args[0]||{type:'string',desc:'待转换列',value:getAllCols()[0]};vcolItem.args[0]=param"></textarea>
+    	</div>
+  	</div>
+  	<div class="form-group">
+    	<label class="col-sm-3 control-label"></label>
+    	<div class="col-sm-6">
+      		<select class="form-control" ng-init="vcolItem.returnType=vcolItem.returnType||'String'" ng-model="vcolItem.returnType">
+				<option value="string">String</option>
+				<option value="integer">Integer</option>
+				<option value="double">Double</option>
+				<option value="float">Float</option>
+				<option value="date">Date</option>
+				<option value="timestamp">Timestamp</option>
+			</select>
+    	</div>
+  	</div>
+  	<div class="help-block">
+		<p>形如：</p>
+		<pre>
+		FuncName1(param11, param12, 
+		FuncName2(param21,param22,param23))
+		</pre>
+		<p>
+		支持函数嵌套
+		</p>
+		<p>
+		支持列引用，引用方式_datax.colname_
+		</p>
+		<p>
+		支持四则运算
+		</p>
+		<p>
+		支持的函数帮助，请访问链接获得更多信息《支持的函数集合》
+		</p>		
+  	</div>
+</div>

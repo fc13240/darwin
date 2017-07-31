@@ -1,0 +1,197 @@
+<div ng-init="inputinfo=inputinfo;index=$index" id="connModal" class="margin">
+	<div >
+		<hdfs-path index="index" id="hdfs_source" control-label="文件路径" name="select" label-col="2" input-col="6"  model-val="inputinfo.dataDir" ignore-row-first="inputinfo.ignoreRowFirst" style="width:870px;" other="margin-left:-52px"></hdfs-path>
+	</div>
+	<div class="row">
+		<div class="col-xs-6 col-md-6">
+			<div class="form-group">
+			    	<label for="name" class="col-sm-4 control-label">数据范围：</label>
+			    	<div class="col-sm-8">
+			    		<select class="form-control " ng-init="inputinfo.dataRange=inputinfo.dataRange||'dirname_time_rule'" ng-model="inputinfo.dataRange" style="margin-left:-40px" >
+							<option value="{{item.type}}"  ng-selected="item.type==inputinfo.dataRange" ng-repeat="item in datarange">{{item.name}}</option>
+						</select>
+			    	</div>
+			  	</div>
+			</div>
+		<div class="col-xs-6 col-md-6">
+		  	<div class="form-group" ng-if="inputinfo.dataRange!='all'&&inputinfo.dataRange=='dirname_time_rule'">
+		    	<label id="fileRuleLabel" for="fileRule" class="col-sm-5 control-label"><span class="redStar">*&nbsp;</span>目录名时间规则：</label>
+		    	<div class="col-sm-6">
+		      		<input name="dirnameTimeRule{{$index}}" ng-model="inputinfo.dataRangeDetail.dirnameTimeRule" value="{{inputinfo.dataRangeDetail.dirnameTimeRule}}" type="text" class="form-control 1" placeholder="dir@{yyyyMMdd}" data-rule="required;" style="width:225px;margin-left:-20px" >
+		    	</div>
+		  	</div>
+		  	<div class="form-group" ng-if="inputinfo.dataRange!='all'&&inputinfo.dataRange=='filename_time_rule'">
+		    	<label id="fileRuleLabel" for="fileRule" class="col-sm-5 control-label"><span class="redStar">*&nbsp;</span>文件名时间规则：</label>
+		    	<div class="col-sm-6">
+		      		<input ng-model="inputinfo.dataRangeDetail.filenameTimeRule" value="{{inputinfo.dataRangeDetail.filenameTimeRule}}" type="text" class="form-control 1" placeholder="file@{yyyyMMdd}" style="width:225px;margin-left:-20px">
+		    	</div>
+		  	</div>
+	    </div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-6 col-md-6">
+			<div class="form-group" ng-if="inputinfo.dataRange!='all'&&inputinfo.dataRange!='dirname_rule'&&inputinfo.dataRange!='filename_rule'&&inputinfo.dataRange!='period'">
+		    	<label for="name" class="col-sm-4 control-label"><span class="redStar">*&nbsp;</span>处理最近：</label>
+		    	<div class="col-sm-2">
+		      		<input type="text" name="timeRangeFrom{{$index}}" ng-model="inputinfo.dataRangeDetail.timeRangeFrom" value="{{inputinfo.dataRangeDetail.timeRangeFrom}}" data-rule="required;" class="form-control 2" style="width:55px;margin-left:-25px" placeholder="24">
+		    	</div>
+		    	<div class="col-sm-1" style="margin-left:-20px">
+		    		到
+		    	</div>
+		    	<div class="col-sm-2">
+		      		<input type="text" name="timeRangeTo{{$index}}" ng-model="inputinfo.dataRangeDetail.timeRangeTo" value="{{inputinfo.dataRangeDetail.timeRangeTo}}" data-rule="required;" style="width:55px" class="form-control 2" placeholder="1">
+		    	</div>
+		    	<div class="col-sm-3">
+		    		<select ng-model="inputinfo.dataRangeDetail.timeUnit" ng-init="inputinfo.dataRangeDetail.timeUnit=inputinfo.dataRangeDetail.timeUnit||'hour'" class="form-control 2">
+						<option value="{{item.type}}" ng-selected="item.type==inputinfo.dataRangeDetail.timeUnit" ng-repeat="item in timeunit">{{item.name}}</option>
+					</select>
+		    	</div>
+		  	</div>
+		</div>
+		<div class="col-xs-6 col-md-6">
+			<div class="form-group" id="dir" ng-if="inputinfo.dataRange!='all'&&inputinfo.dataRange!='period'" ng-hide="inputinfo.dataRange=='filename_time_rule'" >
+		    	<label for="name" class="col-sm-5 control-label" ng-show="inputinfo.dataRange==='filename_rule'" ><span class="redStar">*&nbsp;</span>文件名符合：</label>
+		    	<label for="name" class="col-sm-5 control-label" ng-show="inputinfo.dataRange==='dirname_rule'||inputinfo.dataRange==='dirname_time_rule'"><span class="redStar">*&nbsp;</span>目录名符合：</label>
+		    	
+		    	<div class="col-sm-6">
+		      		<input name="filenameMatch{{$index}}" ng-model="inputinfo.dataRangeDetail.filenameMatch" value="{{inputinfo.dataRangeDetail.filenameMatch}}" type="text" class="form-control 1" ng-disabled="inputinfo.dataRange=='filename_time_rule'" placeholder="*.@{yyyymmdd}.txt" data-rule="required;" style="width:225px;margin-left:-20px">
+		    	</div>
+		  	</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-left:-2px">
+		<div class="form-group" id="file" ng-if="inputinfo.dataRange!='all'&&inputinfo.dataRange!='period'" ng-hide="inputinfo.dataRange=='filename_time_rule'">
+		    	<label for="name" class="col-sm-2 control-label" ng-show="inputinfo.dataRange==='filename_rule'" >文件名排除：</label>
+		    	<label for="name" class="col-sm-2 control-label" ng-show="inputinfo.dataRange==='dirname_rule'||inputinfo.dataRange==='dirname_time_rule'">目录名排除：</label>
+		    	<div  class="glyphicon glyphicon-question-sign propmt" data-toggle="tooltip" style="margin-left:-80px" ng-mouseenter="mouseenter()" data-content='排除文件名符合输入项的目录'></div>
+		    	<div class="col-sm-8">
+		      		<input name="dataRangeDetail{{$index}}" ng-model="inputinfo.dataRangeDetail.filenameNotMatch" value="{{inputinfo.dataRangeDetail.filenameNotMatch}}" type="text" class="form-control 1" ng-disabled="inputinfo.dataRange=='filename_time_rule'" placeholder="bak.*" style="width:667px;margin-left:-22px">
+		    	</div>
+		</div>
+	</div>
+
+	
+
+	<div class="row">
+		<div class="col-xs-6 col-md-6">
+			<div class="form-group">
+				<label for="templates" class="col-sm-4 control-label">模板：</label>
+		    	<div class="col-sm-7">
+		    		<select id="tmpSelect{{$index}}"  class="form-control 2" ng-change="changeTemplates(this)" ng-model="tmpSelectComp" style="width:240px;margin-left:-21px">
+		    			<option value="{{item.id}}" ng-selected="item==inputinfo.dataType" ng-repeat="item in templates">{{item.name}}</option>
+		    		</select>
+		    	</div>
+		    	<div class="col-sm-1">
+		    		<button  type="button" class="btn-del" style="display:none;" ng-click="deleteTemp()" id="deleteTempBtn{{$index}}"></button>
+		    	</div>
+		  	</div>
+		</div>
+		<div class="col-xs-6 col-md-6">
+			<div class="form-group">
+				<label for="hdfsname" class="col-sm-4 control-label"><span class="redStar">*&nbsp;</span>名称：</label>
+		    	<div class="col-sm-6">
+		      		<input type="text" id="dataName" name="dataName{{$index}}" class="form-control 1" tooltip={{inputinfo.dataName}}  ng-model="inputinfo.dataName" value="{{inputinfo.dataName}}" placeholder="名称" data-rule="required;" style="width:260px;margin-left:-20px"/>
+		    	</div>
+		  	</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-6 col-md-6">
+			<div class="form-group">
+		    	<label for="hdfstype" class="col-sm-4 control-label">数据类型：</label>
+		    	<div class="col-sm-7">
+		    		<select class="form-control 2" ng-init="inputinfo.dataType=inputinfo.dataType||'text'"  ng-model="inputinfo.dataType" style="width:240px;margin-left:-21px">
+		    			<option value="{{item.type}}" ng-selected="item.type==inputinfo.dataType" ng-repeat="item in datatypeitems">{{item.name}}</option>
+		    		</select>
+		    	</div>
+		  	</div>
+		</div>
+
+		<div class="col-xs-6 col-md-6">
+			<div class="form-group">
+		    	<label for="hdfstype" class="col-sm-4 control-label">字符编码：</label>
+		    	<div class="col-sm-6">
+		    		<select class="form-control 1" ng-init="inputinfo.encoding=inputinfo.encoding||'UTF-8'" ng-model="inputinfo.encoding" style="width:260px;margin-left:-20px">
+						<option value="{{item.type}}" ng-selected="item.type==inputinfo.encoding" ng-repeat="item in encodingitems">{{item.name}}</option>
+					</select>
+		    	</div>
+		  	</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-6 col-md-6">
+			<div class="form-group">
+		    	<label for="hdfstype" class="col-sm-4 control-label" style="padding-left: 5px;">列分割类型：</label>
+		    	<div class="col-sm-7">
+		    		<select ng-change="selectColType()" class="form-control 2" ng-init="inputinfo.colDelimitType=inputinfo.colDelimitType||'FIELD'" ng-model="inputinfo.colDelimitType" style="width:240px;margin-left:-21px">
+						<option value="{{item.type}}" ng-selected="item.type==inputinfo.colDelimitType" ng-repeat="item in coldelimittype">{{item.name}}</option>
+					</select>
+		    	</div>
+		  	</div>
+		</div>
+		<div class="col-xs-6 col-md-6" style="margin-left:-2px">
+			<div class="form-group">
+	   			<label for="hdfssplit" class="col-sm-4 control-label" style="padding-left: 5px;">
+	   			<span class="redStar">*&nbsp;</span>{{inputinfo.colDelimitType==='FIELD'?'数据分隔符':'正则表达式'}}：</label>
+	   			<dataclean-separator control-label="" model-val="inputinfo.colDelimitExpr"
+	   			ng-disabled="inputinfo.colDelimitType==='REGX'" ng-hide="inputinfo.colDelimitType==='REGX'" style="width:550px;" other="margin-left:-38px"></dataclean-separator>
+
+	   			<div class="col-sm-6">
+		      		<input type="text" name="colDelimitExpr"  ng-if="inputinfo.colDelimitType==='REGX'" class="form-control " ng-trim="false" ng-init="inputinfo.colDelimitExpr=inputinfo.colDelimitExpr||'\\t'" ng-model="inputinfo.colDelimitExpr" value="{{inputinfo.colDelimitExpr}}" placeholder="正则表达式" data-rule="required;" style="width:260px;margin-left:-20px"/>
+		    	</div>	
+		    </div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-4 col-md-4">
+			<div class="form-group">
+		    	<label for="hdfscols" class="col-sm-5 control-label" style="margin-left:22px"><span class="redStar">*&nbsp;</span>分割列数：</label>
+		    	<div class="col-sm-6">
+		      		<input type="text" name="colCount{{$index}}" class="form-control " ng-model="inputinfo.colCount" value="{{inputinfo.colCount}}" placeholder="分割列数" data-rule="required;" style="margin-left:-34px">
+		    	</div>
+	 		</div>
+	    </div>
+		<div class="col-xs-3 col-md-3">
+			<div class="form-group">
+		    	<label for="hdfscols" class="col-sm-6 control-label">多行合并：</label>
+		    	<div class="col-sm-6 checkbox text-left">
+		    		<label>
+		    			<input type="checkbox" ng-true-value="1" ng-false-value="0" ng-model="inputinfo.multilineCombine" style="margin-top:8px;margin-left:-50px">
+		    		</label>
+		    		<div  class="glyphicon glyphicon-question-sign propmt" data-toggle="tooltip" ng-mouseenter="mouseenter()" data-content='将多行数据根据识别符进行合并，遇到识别符后开始下一条数据' style="margin-top:13px;margin-left:-30px" ></div>
+		    	    </div>
+	 		</div>
+		</div>
+		<div class="col-xs-5 col-md-5">
+			<div class="form-group" ng-show="inputinfo.multilineCombine==1">
+		    	<label for="hdfscols" class="col-sm-4 control-label"><span class="redStar">*&nbsp;</span>换行识别：</label>
+		    	<div class="col-sm-7">
+		    		<input class="form-control 1" rows="3" ng-model="inputinfo.combineRegex" value="{{inputinfo.combineRegex}}" placeholder="换行识别" 
+		    		style="width:213px;margin-left:-20px"></input>
+		    	</div>
+	 		</div>
+		</div>
+	</div>
+
+	<div style="clear:both"></div>
+	<table-set cleancomp-config="cleancompConfig"  col-detail="inputinfos[$index].colDetail" max-row-count="inputinfo.colCount" style="margin-bottom:-40px"></table-set>
+
+	<div style="width: 50%; float: left;margin-top:30px">
+		<div class="form-group">
+	    	<div class="col-sm-3">
+	    		<input type="button" code="save" class="btn btn-primary" value="另存为模板"  style="margin-left:40px" id="saveTemplatesBtn" />
+	    	</div>
+	    	<div class="col-sm-6">
+		    	<input placeholder="请输入模板的名称" style="margin-left:10px;width:180px;height:40px;display:none"  id="templateName" class="form-control"/>	
+		    </div>
+		     <div class="col-sm-2">
+		    	<input type="button" code="save" class="btn btn-cancel" value="取消"  style="margin-left:10px;display:none;color:black" id="cancelbutton" />
+		    </div>
+		</div>
+	</div>
+</div>

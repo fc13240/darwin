@@ -1,0 +1,59 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "Point",
+                "id": "PEK",
+                "cp": [
+                    116.3912476741,
+                    39.907139952
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    116.3912476741,
+                    39.907139952
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "Point",
+                "id": "HKG",
+                "cp": [
+                    121.4768143657,
+                    31.2453545219
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.4768143657,
+                    31.2453545219
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "Point",
+                "id": "PVG",
+                "cp": [
+                    87.5554528286,
+                    43.8333251122
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    87.5554528286,
+                    43.8333251122
+                ]
+            }
+        }
+    ]
+}

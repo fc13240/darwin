@@ -1,0 +1,40 @@
+<div class="panel panel-darwin">
+	<div style="border:1px solid #ccc;" class="panel-heading">
+		正负面情绪分析
+	</div>
+	<div style="margin-top:30px;">
+		<div class="text-light">
+			<a class="text-success" ng-click="addAggregate()"><span class="glyphicon glyphicon-plus"></span>添加标签字段</a>
+		</div>
+		<table  class="table table-condensed">
+			<tbody>
+				<tr ng-repeat="agg in statCompConfig.config.aggregate">
+					<td>
+						<div>
+							标签列：
+							<select ng-model="agg.field" >
+								<option value="{{col}}" ng-selected="agg.field==col" ng-repeat="col in getAllCols()">{{col}}</option>
+							</select>
+						</div>
+					</td>
+					<td>
+						<a ng-click="removeAggregate($index)" title="删除" class="text-danger"><span class="glyphicon glyphicon-trash"></span></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="form-group">
+	    	<div class="col-sm-10">
+	    		内容列：
+	    		<select ng-model="statCompConfig.config.participle" id="groupby-field">
+<!-- 	    			<option>选择分词字段</option> -->
+	    			<option ng-selected="col==statCompConfig.config.participle" ng-repeat="col in getAllCols() track by $index" value="{{col}}">{{col}}</option>
+	    		</select>
+	    		<label class="help-block">(*需要分词的字段)</label>
+		  	</div>
+		  	<div class="col-sm-2">
+		  	</div>
+		</div>
+	</div>
+	
+</div>

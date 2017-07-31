@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	    <link rel="stylesheet" href="css/common.css">
+	    <link href="./vendor/popupsmallmenu/css/jquery.popupSmallMenu.css" rel="stylesheet">
+	    <script type='text/javascript'  data-main='./app/components/require.config.js' src='./vendor/require/require.js'></script>
+	    <script type="text/javascript">
+		    function update(data) {
+				angular.element('#wrap').scope().update(data);
+			}
+	
+			function save (){
+				angular.element('#wrap').scope().save();
+			}
+
+			function setdisabled(disabled) {
+				angular.element('#wrap').scope().setDisabled(disabled);
+			}
+		</script>
+	</head>
+	<body>
+		<div id ="wrap" ng-controller="graphpaperCtrl" style="min-height: 800px;">
+			<div style="text-align: center; height: 10px; position: absolute; margin-top: 30%; margin-left: 45%;">
+				<img src="img/loading.gif">
+			</div>
+		</div>
+		<context-menu></context-menu>
+	</body>
+</html>

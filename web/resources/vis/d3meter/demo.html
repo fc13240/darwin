@@ -1,0 +1,30 @@
+<html>
+<head>
+<link type="text/css" href="/vis/d3meter/meter.css" rel="stylesheet" media="screen"/>
+</head>
+<body>
+
+<div id="meterChart"></div>
+
+<script src="/vis/jquery-1.11.1.min.js"></script>
+<script src="/vis/d3.min.js"></script>
+<script src="/vis/darwinvis.js"></script>
+<script src="/vis/d3bar/d3.tip.v0.6.3.js"></script>
+<script src="/vis/d3meter/iopctrl.js"></script>
+<script src="/vis/d3meter/darwinmeter.js"></script>
+<script>
+var domid = "meterChart";
+var data = {'value':820.5, 'ratio':50};
+
+var graph = new DarwinMeter(domid, data);
+var width = 800;
+var height = 600;//auto
+var options = {
+		"header.title.text":"Top 15 Fears",
+		"header.subtitle.text":"What strikes the most terror in people?",
+};
+graph.draw(width, height, options);
+</script>
+
+</body>
+</html>

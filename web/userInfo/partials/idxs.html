@@ -1,0 +1,15 @@
+<div>
+    <div class="box-element user-card">
+        <div class="view">
+            <div class="title">
+                <img src="userInfo/img/idx.png"/>
+            </div>
+            <div class="content">
+                <div>
+                    <h6>大检索空间
+                </div>
+                <div>{{idxs.idxs.length}}个索引，共使用{{(idxs.idxs | sum:'usagekb')*1024 | bytesToSize}}</div>
+            </div>
+        </div>
+    </div>
+</div>

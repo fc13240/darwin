@@ -1,0 +1,26 @@
+#需要先在securecrt中开启hadoop服务，并启动r软件
+#根据实际环境变量更改HADOOP_CMD和HADOOP_STREAMING后面的路径
+Sys.setenv(HADOOP_CMD="/opt/beh/core/hadoop/bin/hadoop")
+Sys.setenv(HADOOP_STREAMING="/opt/beh/core/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.5.0-cdh5.2.0.jar")
+#如果不设环境变量，在加载rhdfs时会报错
+
+library('rhdfs')
+library('rmr2')
+hdfs.init()
+small.ints=to.dfs(1:10)
+
+
+mapreduce(
+  input = small.ints,
+  map = function(k,v)
+  {
+    lapply(seq_along(v), function(r){
+      x<-runif(v[[r]])
+      keyval(r,c(max(x),min(x)))
+    })
+  }
+)
+
+#至此会在命令行输出一堆提示文件，程序执行成功会输出一个output文件夹目录，如下/tmp/file27a81b3b26d4，根据输出文件名称更改
+output<-from.dfs('/tmp/file27a81b3b26d4')
+table_out<-do.call(‘rbind’,lapply(output$val,”[[”,2))

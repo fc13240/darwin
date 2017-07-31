@@ -1,0 +1,63 @@
+14-12-13 18:58:35 - userupdate - DEBUG - +++++++++++authentication 开始+++++++++++ 
+14-12-13 18:58:35 - userupdate - DEBUG - number=18611115555 
+14-12-13 18:58:35 - userupdate - DEBUG - imsi=13211112222 
+14-12-13 18:58:35 - userupdate - DEBUG - user number didn't exist! 
+14-12-13 18:58:35 - userupdate - DEBUG - insert user table :insert into userinfo (numcount,userid,dataid)Values(?,USERID_SEQ.NEXTVAL,SEQ_USERINFO.NEXTVAL) 
+14-12-13 18:58:35 - userupdate - DEBUG - insert user table result:1 
+14-12-13 18:58:35 - userupdate - DEBUG - the new user's id is:1000000131 
+14-12-13 18:58:35 - userupdate - DEBUG - insert into usernumber sucess! 
+14-12-13 18:58:35 - userupdate - DEBUG - insert into phonetag sucess! 
+14-12-13 18:58:35 - userupdate - DEBUG - --------------authentication 结束------------ 
+14-12-13 18:58:55 - userupdate - DEBUG - +++++++++++authentication 开始+++++++++++ 
+14-12-13 18:58:55 - userupdate - DEBUG - number=18611116666 
+14-12-13 18:58:55 - userupdate - DEBUG - imsi=13211112222 
+14-12-13 18:58:55 - userupdate - DEBUG - user number didn't exist! 
+14-12-13 18:58:55 - userupdate - DEBUG - insert user table :insert into userinfo (numcount,userid,dataid)Values(?,USERID_SEQ.NEXTVAL,SEQ_USERINFO.NEXTVAL) 
+14-12-13 18:58:55 - userupdate - DEBUG - insert user table result:1 
+14-12-13 18:58:55 - userupdate - DEBUG - the new user's id is:1000000132 
+14-12-13 18:58:55 - userupdate - DEBUG - insert into usernumber sucess! 
+14-12-13 18:58:55 - userupdate - DEBUG - insert into phonetag sucess! 
+14-12-13 18:58:55 - userupdate - DEBUG - --------------authentication 结束------------ 
+14-12-13 18:59:03 - userupdate - DEBUG - +++++++++++authentication 开始+++++++++++ 
+14-12-13 18:59:03 - userupdate - DEBUG - number=18611117777 
+14-12-13 18:59:03 - userupdate - DEBUG - imsi=13211112222 
+14-12-13 18:59:03 - userupdate - DEBUG - user number didn't exist! 
+14-12-13 18:59:03 - userupdate - DEBUG - insert user table :insert into userinfo (numcount,userid,dataid)Values(?,USERID_SEQ.NEXTVAL,SEQ_USERINFO.NEXTVAL) 
+14-12-13 18:59:03 - userupdate - DEBUG - insert user table result:1 
+14-12-13 18:59:03 - userupdate - DEBUG - the new user's id is:1000000133 
+14-12-13 18:59:03 - userupdate - DEBUG - insert into usernumber sucess! 
+14-12-13 18:59:04 - userupdate - DEBUG - insert into phonetag sucess! 
+14-12-13 18:59:04 - userupdate - DEBUG - --------------authentication 结束------------ 
+14-12-13 18:59:15 - userupdate - DEBUG - +++++++++++authentication 开始+++++++++++ 
+14-12-13 18:59:15 - userupdate - DEBUG - number=18611118888 
+14-12-13 18:59:15 - userupdate - DEBUG - imsi=13211112222 
+14-12-13 18:59:15 - userupdate - DEBUG - user number didn't exist! 
+14-12-13 18:59:15 - userupdate - DEBUG - insert user table :insert into userinfo (numcount,userid,dataid)Values(?,USERID_SEQ.NEXTVAL,SEQ_USERINFO.NEXTVAL) 
+14-12-13 18:59:15 - userupdate - DEBUG - insert user table result:1 
+14-12-13 18:59:15 - userupdate - DEBUG - the new user's id is:1000000134 
+14-12-13 18:59:15 - userupdate - DEBUG - insert into usernumber sucess! 
+14-12-13 18:59:15 - userupdate - DEBUG - insert into phonetag sucess! 
+14-12-13 18:59:15 - userupdate - DEBUG - --------------authentication 结束------------ 
+14-12-13 18:59:28 - userupdate - DEBUG - +++++++++++authentication 开始+++++++++++ 
+14-12-13 18:59:28 - userupdate - DEBUG - number=18611115555 
+14-12-13 18:59:28 - userupdate - DEBUG - imsi=13211112222 
+14-12-13 18:59:29 - userupdate - DEBUG - user number already exists! 
+14-12-13 18:59:29 - userupdate - DEBUG - --------------authentication 结束------------ 
+14-12-13 18:59:03 - userupdate - INFO - number=18611117777 
+14-12-13 18:59:03 - userupdate - INFO - number=18611117777
+14-12-13 18:59:03 - userupdate - INFO - number=18611117777 
+14-12-13 18:59:03 - userupdate - INFO - number=18611117777
+14-12-13 18:59:03 - userupdate - INFO - number=18611117777 
+14-12-13 18:59:03 - userupdate - INFO - number=18611117777
+14-12-13 18:59:03 - userupdate - INFO - number=18611117777 
+14-12-13 18:59:03 - userupdate - INFO - number=18611117777
+14-12-13 18:59:03 - userupdate - INFO - number=18611117777 
+14-12-13 18:59:03 - userupdate - INFO - number=18611117777
+14-12-13 18:59:03 - userupdate - INFO - number=18611117777 
+14-12-13 18:59:03 - userupdate - INFO - number=18611117777
+14-12-13 18:59:03 - userupdate - INFO - number=18611117777 
+14-12-13 18:59:03 - userupdate - INFO - number=18611117777
+14-12-13 18:59:03 - userupdate - INFO - number=18611117777 
+14-12-13 18:59:03 - userupdate - INFO - number=18611117777
+
+ 

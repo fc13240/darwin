@@ -1,0 +1,59 @@
+<html>
+<head></head>
+<body>
+
+<div id="pieChart"></div>
+<script src="/resources/js/jquery-1.9.1.min.js"></script>
+<script src="/resources/vis/d3.min.js"></script>
+<script src="/resources/vis/d3pie/d3pie.min.js"></script>
+<script src="/resources/vis/darwinvis.js"></script>
+<script src="/resources/vis/d3pie/darwinpie.js"></script>
+<script>
+var domid = "pieChart";
+var data = [
+			{
+				"label": "JavaScript",
+				"value": 264131
+			},
+			{
+				"label": "Ruby",
+				"value": 218812
+			},
+			{
+				"label": "Java",
+				"value": 157618
+			},
+			{
+				"label": "PHP",
+				"value": 114384
+			},
+			{
+				"label": "Python",
+				"value": 95002
+			},
+			{
+				"label": "C+",
+				"value": 78327
+			},
+			{
+				"label": "C",
+				"value": 67706
+			},
+			{
+				"label": "Objective-C",
+				"value": 36344
+			}
+		];
+
+var pie = new DarwinPie(domid, data);
+var width = 590;
+var height = "";//auto
+var options = {
+		"header.title.text":"Lots of Programming Languages",
+		"header.subtitle.text":"A full pie chart to show off label collision detection and resolution.",
+};
+pie.draw(width, height, options);
+</script>
+
+</body>
+</html>

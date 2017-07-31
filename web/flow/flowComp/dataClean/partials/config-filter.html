@@ -1,0 +1,64 @@
+<div>
+
+	<div style="margin-top: 20px;">
+		筛选条件<a ng-click="addnewgroup()">新增条件组</a>
+	</div>
+	<div>
+		<div ng-init="last=$last" ng-model="groupindex=$index;" ng-repeat="group in filter.groups">
+			<div style="border: 1px solid #ccc; padding: 10px;">
+				
+				<div ng-repeat="item in group.groupitems track by $index" >
+					<div style="position:relative;height:120px;">
+						<div>
+							<select ng-init="item.colname=item.colname||colname[0].value" ng-model="item.colname" ng-change="change()" style="width:200px">
+								<option style="width:200px"  id="colValue" value="{{col.value}}" ng-selected="item.colname==col.value" placeholder="列名" ng-repeat="col in colname">{{col.text}}</option>
+							</select>
+							
+						</div>
+						<div>
+							<select ng-init="item.cond=item.cond||conds[0].value" ng-model="item.cond">
+								<option value="{{cond.value}}" ng-selected="item.cond==cond.value" ng-repeat="cond in conds">{{cond.text}}</option>
+							</select>
+						</div>
+						<div ng-show="item.cond!=='notnull'&&item.cond!=='isnull'">
+							<select ng-init="item.valtype=item.valtype||'string'" ng-model="item.valtype">
+								<option value="string" selected>值</option>
+							</select>
+							<!-- 
+							<select ng-model="item.val" ng-show="item.valtype=='field'">
+								<option value="{{col.value}}" ng-selected="item.val==col.value" ng-repeat="col in colname">{{col.text}}</option>
+							</select>
+							 -->
+							<input id="itemVal{{groupindex}}{{$index}}"  type="text" ng-blur="blur(groupindex,$index);" ng-model="item.val" value="{{item.val}}" placeholder="值" ng-show="item.valtype=='string'" />
+							
+
+						</div>
+						<div style="margin:10px 0;">
+							<select ng-show="!$last" ng-init="group.groupitemrels[$index]=group.groupitemrels[$index]||'AND'" ng-model="group.groupitemrels[$index]">
+								<option value="AND">并且</option>
+								<option value="OR">或者</option>
+							</select>
+						</div>
+						<div style="position:absolute;right:0;top:0">
+							<a ng-click="remove(groupindex,$index);" class="text-danger">
+								<span class="glyphicon glyphicon-trash"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div style="text-align:center;">
+					<a ng-click="addnewcond(groupindex)">新增条件</a>
+					<a ng-click="removethisgroup(groupindex)">删除整个分组</a>
+				</div>
+			</div>
+			<div>
+
+				<select ng-show="!$last" ng-init="filter.grouprels[groupindex]=filter.grouprels[groupindex]||'OR'"  ng-model="filter.grouprels[groupindex]">
+					<option value="AND">并且</option>
+					<option value="OR">或者</option>
+				</select>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+ng-click 指令定义了一个 AngularJS 单击事件。
+
+<div ng-app="" ng-controller="myController">
+
+<button ng-click="count = count + 1">点我！</button>
+
+<p>{{ count }}</p>
+
+</div>
+
+详见：http://www.w3cschool.cc/angularjs/angularjs-html-events.html

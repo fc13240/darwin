@@ -1,0 +1,67 @@
+<div ng-init="storeinfo=storeinfo;index=$index">
+	<div>
+	  	<div class="form-group">
+	    	<label for="dataType" class="col-sm-3 control-label">数据类型：</label>
+	    	<div class="col-sm-6">
+	    		<select class="form-control" ng-init="storeinfo.dataType=storeinfo.dataType||'text'"  ng-model="storeinfo.dataType" style="margin-left:-20px">
+	    			<option value="{{item.type}}" ng-selected="item.type==storeinfo.dataType" ng-repeat="item in datatypeitems">{{item.name}}</option>
+	    		</select>
+	    	</div>
+	  	</div>
+	  	<!-- <div class="form-group">
+	    	<label for="name" class="col-sm-3 control-label"><span class="redStar">*&nbsp;</span>数据分隔符：</label>
+	    	<div class="col-sm-6">
+	      		<input ng-model="storeinfo.colDelimitExpr" name="coldelimitExpr" ng-trim="false" value="{{storeinfo.colDelimitExpr}}" type="text" class="form-control" placeholder="数据分隔符" data-rule="required">
+	    	</div>
+	  	</div> -->
+	  	<div class="form-group">
+	    	<label for="dataType" class="col-sm-3 control-label">数据分割符：</label>
+	    	<div >
+	    		<store-separator control-label="" model-val="storeinfo.colDelimitExpr" other="margin-left:-20px;" style="width:870px" storetype="storeinfo.storeExprType"></store-separator>
+	    	</div>
+	  	</div>
+	  	
+	   
+	  	<hdfs-path index="index" id="hdfs_store" control-label="父目录名" label-col="3" input-col="6" model-val="storeinfo.paDataDir"  other="margin-left:-20px"></hdfs-path>
+	  	<div class="form-group">
+	    	<label for="name" class="col-sm-3 control-label"><span class="redStar">*&nbsp;</span>目录名：</label>
+	    	<div class="col-sm-6">
+	      		<input ng-model="storeinfo.dataDir" name="dataDir" value="{{storeinfo.colDelimitExpr}}" type="text" class="form-control" placeholder="目录名" ddta-rule="required" style="margin-left:-20px">
+	    	</div>
+	  	</div>
+<!-- 	  	<div class="form-group"> -->
+<!-- 	    	<label class="col-sm-3 control-label">排序字段</label> -->
+<!-- 	    	<div class="col-sm-3"> -->
+<!-- 	    		<select id="storeinfo-sortcols-{{$index}}" class="form-control"> -->
+<!-- 	    			<option ng-repeat="col in getAllCols() track by $index" value="{{col}}">{{col}}</option> -->
+<!-- 	    		</select> -->
+<!-- 	    	</div> -->
+<!-- 	    	<div class="col-sm-2"> -->
+<!-- 	    		<button type="button" class="form-control btn btn-xs btn-default" ng-click="addSortCols(index)"> -->
+<!-- 	    			添加至排序 -->
+<!-- 				</button> -->
+<!-- 	    	</div> -->
+<!-- 	  	</div> -->
+<!-- 	  	<div class="form-group"> -->
+<!-- 	    	<label class="col-sm-3 control-label"></label> -->
+<!-- 	    	<div class="col-sm-6"> -->
+<!-- 	      		<select size="5" class="form-control" id="storeinfo-sortcols-selected{{$index}}"> -->
+<!-- 	      			<option value="{{sortcol}}" ng-repeat="sortcol in storeinfo.sort.cols">{{sortcol}}</option> -->
+<!-- 	      		</select> -->
+<!-- 	    	</div> -->
+<!-- 	    	<div class="col-sm-3"> -->
+<!-- 	    		<a class="btn btn-xs btn-danger" ng-click="removeSortCols(index)"> -->
+<!-- 	    			删除选中字段 -->
+<!-- 	    		</a> -->
+<!-- 	    	</div> -->
+<!-- 	  	</div> -->
+<!-- 	  	<div class="form-group"> -->
+<!-- 	    	<label class="col-sm-3 control-label">顺序</label> -->
+<!-- 	    	<div class="col-sm-3"> -->
+<!-- 	    		<select class="form-control" ng-model="storeinfo.sort.order"> -->
+<!-- 	    			<option ng-repeat="order in allOrders track by $index" value="{{order.value}}" ng-selected="order.value==storeinfo.sort.order">{{order.text}}</option> -->
+<!-- 	    		</select> -->
+<!-- 	    	</div> -->
+<!-- 	  	</div> -->
+	</div>
+</div>

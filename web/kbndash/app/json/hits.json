@@ -1,0 +1,13 @@
+{
+    "hits": {
+        "total": 85971,
+        "max_score": 0,
+        "hits": []
+    },
+    "facets": {
+        "0": {
+            "_type": "query",
+            "count": 12322
+        }
+    }
+}

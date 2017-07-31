@@ -1,0 +1,168 @@
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "ENTRY_NETWORK",
+    "type": "Text"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "ENTRY_STATION",
+    "type": "Text"
+},
+{
+    "dateFormat": "",
+    "desc": "yyyy-MM-dd HH:mm:ss",
+    "isTime": true,
+    "kvMainId": 0,
+    "name": "ENTRY_TIME",
+    "type": "Datetime"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "EXIT_NETWORK",
+    "type": "Text"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "EXIT_STATION",
+    "type": "Text"
+},
+{
+    "dateFormat": "",
+    "desc": "yyyy-MM-dd HH:mm:ss",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "EXIT_TIME",
+    "type": "Datetime"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "VEHICLE_ID",
+    "type": "Text"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "VEHICLE_CLASS",
+    "type": "Text"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "VEHICLE_TYPE",
+    "type": "Text"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "DISTANCE",
+    "type": "Double"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "AXIS_NUM",
+    "type": "Integer"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "TOTAL_WEIGHT",
+    "type": "Double"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "OVERLOAD_RATE",
+    "type": "Double"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "TOTALWEIGHTLIMIT",
+    "type": "Text"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "AXISTYPE",
+    "type": "Text"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "JZXFLAG",
+    "type": "Text"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "FLAGSTATION",
+    "type": "Text"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "ETCFLAG",
+    "type": "Text"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "COMPUTESTATION",
+    "type": "String"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "RecordType",
+    "type": "String"
+},
+{
+    "dateFormat": "",
+    "desc": "",
+    "isTime": false,
+    "kvMainId": 0,
+    "name": "DealStatus",
+    "type": "String"
+}

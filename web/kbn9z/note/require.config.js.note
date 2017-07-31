@@ -1,0 +1,11 @@
+require.config.js 中，主要分成两部分配置，一个是 paths，一个是 shim。
+paths 用来指定依赖模块的导出名称和模块 js 文件的具体路径。
+而 shim 用来指定依赖模块之间的依赖关系。
+比方说：绘制图表的 js，kibana3 里用的是 jquery.flot 库。这个就首先依赖于 jquery 库。
+(通俗的说，就是原先普通的 HTML 写法里，要先加载 jquery.js 再加载 jquery.flot.js)
+
+在整个 paths 中，需要单独提一下的是 elasticjs:'../vendor/elasticjs/elastic-angular-client'。
+这是串联 elastic.js 和 angular.js 的文件。这里面实际是定义了一个 angular.module 的 factory，名叫 ejsResource。
+后续我们在 kibana 3 里用到的跟 Elasticsearch 交互的所有方法，都在这个 ejsResource 里了。
+
+factory 是 angular 的一个单例对象，创建之后会持续到你关闭浏览器。Kibana 3 就是通过这种方式来控制你所有的图表是从同一个 Elasticsearch 获取的数据

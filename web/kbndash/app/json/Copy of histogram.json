@@ -1,0 +1,35 @@
+{
+    "hits": {
+        "total": 234326757,
+        "max_score": 0,
+        "hits": []
+    },
+    "facets": {
+        "0": {
+            "_type": "date_histogram",
+            "entries": [
+                {
+                    "time": 1428840000000,
+                    "count": 9149013
+                },
+                {
+                    "time": 1428883200000,
+                    "count": 4019129
+                }
+            ]
+        },
+        "1": {
+            "_type": "date_histogram",
+            "entries": [
+                {
+                    "time": 1428840000000,
+                    "count": 9149013
+                },
+                {
+                    "time": 1428883200000,
+                    "count": 4019129
+                }
+            ]
+        }
+    }
+}

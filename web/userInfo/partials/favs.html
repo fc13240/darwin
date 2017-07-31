@@ -1,0 +1,21 @@
+<div>
+    <div class="box-element user-card">
+        <div class="view">
+            <div class="title">
+                <img src="userInfo/img/fav.png"/>
+            </div>
+            <div class="content">
+                <div>
+                    <h6>收藏
+                </div>
+                <div>
+                    <div ng-repeat="fav in favs.favs">
+                        <span>{{fav.favtypename}}:</span>
+                        <span><a href="{{fav.favurl}}">{{fav.favtitle}}</a></span>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" ng-app="comp">
+	<head>
+	  <meta charset="utf-8">
+	  <title>清洗组件</title>
+	  <link rel="stylesheet" href="flow/flowComp/dataClean/css/bootstrap.min.css"/>
+	  <script src="flow/flowComp/dataClean/js/lib/jquery-1.9.1.min.js"></script>
+	  <script src="flow/flowComp/dataClean/js/lib/bootstrap.min.js"></script>
+	  <script src="flow/flowComp/dataClean/js/lib/layer/layer.js"></script>
+	  <script src="flow/flowComp/dataClean/js/lib/angular.js"></script>
+	  <script src="flow/flowComp/dataClean/js/app.js"></script>
+	  <script src="flow/flowComp/dataClean/js/filters/filters.js"></script>
+      <script src="flow/flowComp/dataClean/js/services/config.js"></script>
+      <script src="flow/flowComp/dataClean/js/services/utils.js"></script>
+
+     <script src="flow/flowComp/dataClean/js/controllers/controllers.js"></script>
+
+     <script src="flow/flowComp/dataClean/js/directives/directives.js"></script>
+     <script src="flow/flowComp/dataClean/js/directives/hdfsSource.js"></script>
+     <script src="flow/flowComp/dataClean/js/directives/sourceSet.js"></script>
+     <script src="flow/flowComp/dataClean/js/directives/hdfsStore.js"></script>
+	</head>
+	<body>
+		<div ng-controller="compCtrl">
+			<form id="rightForm" class="form-horizontal" role="form">
+				<div class="panel panel-default">
+					<div class="form-group">
+						<label class="col-sm-3 control-label" for="name">组件名称</label>
+						<div class="col-sm-5">
+							<input data-rule="required;length[1~45];" name="name" id="name" ng-model="cleancompConfig.compname" value="cleancompConfig.compname" placeholder="组件名称" class="form-control input-inline">
+						</div>
+						<div class="col-sm-1">
+							<input type="button" value="保存" class="btn btn-primary" ng-click="saveComp()">
+						</div>
+						<div class="col-sm-1">
+							<a href="/flow/init.jsp?id=464" class="btn btn-primary">返回流程</a>
+						</div>
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4">
+								<source-set></source-set>
+							</div>
+							<div class="col-md-4">
+								<config-set></config-set>
+							</div>
+							<div class="col-md-4">
+								<store-set></store-set>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

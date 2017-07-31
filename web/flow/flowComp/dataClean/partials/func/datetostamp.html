@@ -1,0 +1,45 @@
+<div id="otherConfig">
+	<div class="form-group">
+    	<label class="col-sm-3 control-label">所属数据：</label>
+    	<div class="col-sm-6">
+    		<select class="form-control" ng-init="vcolItem.data=vcolItem.data||inputinfos[0].dataName" ng-model="vcolItem.data">
+				<option value="{{input.dataName}}" ng-selected="input.dataName==vcolItem.data" ng-repeat="input in inputinfos">{{input.dataName}}</option>
+			</select>
+    	</div>
+  	</div>
+	<div class="form-group">
+    	<label class="col-sm-3 control-label"><span class="redStar">*&nbsp;</span>新列名称：</label>
+    	<div class="col-sm-6">
+      		<input type="text"  name="colName" class="form-control" ng-model="vcolItem.colName" ng-init="vcolItem.colName=vcolItem.colName" placeholder="新列名称" data-rule="required" ng-blur="isExist(vcolItem.colName)"/>
+    	</div>
+      <input id="newCol" type="hidden" value="{{vcolItem.colName}}" >
+  	</div>
+  	<!-- 
+  	<div class="form-group">
+    	<label for="hdfsname" class="col-sm-3 control-label">参数赋值：</label>
+  	</div>
+  	 -->
+  	<div class="form-group">
+    	<label class="col-sm-3 control-label">待转换列：</label>
+    	<div class="col-sm-6">
+      		<select class="form-control" ng-model="vcolItem.args[0].value" ng-init="param=vcolItem.args[0]||{type:'field',desc:'待转换列',value:getAllCols()[0]};vcolItem.args[0]=param">
+				<option value="{{col}}" ng-selected="col==vcolItem.args[1].value" ng-repeat="col in getAllCols(vcolItem.data) track by $index">{{col}}</option>
+			</select>
+    	</div>
+  	</div>
+  	<div class="form-group">
+    	<label class="col-sm-3 control-label"><span class="redStar">*&nbsp;</span>日期格式：</label>
+    	<div class="col-sm-6">
+      		<input type="text" name="dateFormat" class="form-control" ng-model="vcolItem.args[1].value" ng-init="param=vcolItem.args[1]||{type:'string',desc:'日期格式',value:''};vcolItem.args[1]=param" placeholder="yyyy-MM-dd HH:mm:SS" data-rule="required"/>
+    	</div>
+  	</div>
+  	<div class="form-group">
+    	<label class="col-sm-3 control-label">时间戳精度：</label>
+    	<div class="col-sm-6">
+      		<select class="form-control" ng-model="vcolItem.args[2].value" ng-init="param=vcolItem.args[2]||{type:'string',desc:'时间戳精度',value:'s'};vcolItem.args[2]=param">
+				<option value="ms">毫秒</option>
+				<option value="s">秒</option>
+			</select>
+    	</div>
+  	</div>
+</div>

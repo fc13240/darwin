@@ -1,0 +1,9 @@
+<div class="row-fluid"><style>.querySelect .query {
+        margin-right: 5px;
+      }
+      .querySelect .selected {
+        border: 3px solid;
+      }
+      .querySelect .unselected {
+        border: 0px solid;
+      }</style><div class="span2" style="margin-left:0px"><label class="small">选择要展示的查询(可以添加多个检索框，选中一个或所有检索数据以展示)</label><select class="input-small" ng-init="panel.queries.mode=panel.queries.mode||'all'" ng-change="set_refresh(true);" ng-model="panel.queries.mode"><option ng-selected="panel.queries.mode==='all'" value="all">所有查询</option><option ng-selected="panel.queries.mode==='pinned'" value="pinned">pinned</option><option ng-selected="panel.queries.mode==='unpinned'" value="unpinned">unpinned</option><option ng-selected="panel.queries.mode==='selected'" value="selected">selected</option></select></div><div class="span9 querySelect" ng-show="panel.queries.mode == 'selected'"><label class="small">选中的查询</label><span ng-style="{'border-color': querySrv.list()[id].color}" ng-class="{selected:_.contains(panel.queries.ids,id),unselected:!_.contains(panel.queries.ids,id)}" ng-repeat="id in querySrv.ids()" ng-click="panel.queries.ids = _.toggleInOut(panel.queries.ids,id);set_refresh(true);" class="query pointer badge"><i class="icon-circle" ng-style="{color: querySrv.list()[id].color}"></i> <span>{{querySrv.list()[id].alias || querySrv.list()[id].query}}</span></span></div></div>

@@ -1,0 +1,95 @@
+<html>
+<head>
+    <script src="/resources/vis/jquery-1.11.1.min.js"></script>
+	<script src="/resources/vis/d3.min.js"></script>
+
+    <script type="text/javascript" src="jquery.tipsy.js"></script>
+  	<link href="tipsy.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div id="lineChart"></div>
+
+<script src="/vis/darwinvis.js"></script>
+<script src="/vis/d3line/darwinline.js"></script>
+<script>
+var domid = "lineChart";
+var data = [
+			{
+				"datetime": "2014-11-10 01:00:01",
+				"value": 264131
+			},
+			{
+				"datetime": "2014-11-11 12:00:03",
+				"value": 218812
+			},
+			{
+				"datetime": "2014-11-12 21:00:10",
+				"value": 157618
+			},
+			{
+				"datetime": "2014-11-13 00:00:00",
+				"value": 114384
+			},
+			{
+				"datetime": "2014-11-14 00:00:00",
+				"value": 95002
+			},
+			{
+				"datetime": "2014-11-15 00:00:00",
+				"value": 78327
+			},
+			{
+				"datetime": "2014-11-16 00:00:00",
+				"value": 67706
+			},
+			{
+				"datetime": "2014-11-17 00:00:00",
+				"value": 36344
+			},
+			{
+				"datetime": "2014-11-18 00:00:00",
+				"value": 136344
+			},
+			{
+				"datetime": "2014-11-19 00:00:00",
+				"value": 136344
+			},
+			{
+				"datetime": "2014-11-20 00:00:00",
+				"value": 136344
+			},
+			{
+				"datetime": "2014-11-21 00:00:00",
+				"value": 136344
+			},
+			{
+				"datetime": "2014-11-22 00:00:00",
+				"value": 136344
+			},
+			{
+				"datetime": "2014-11-23 00:00:00",
+				"value": 136344
+			},
+			{
+				"datetime": "2014-11-24 00:00:00",
+				"value": 136344
+			},
+			{
+				"datetime": "2014-11-25 00:00:00",
+				"value": 136344
+			}
+		];
+
+var line = new DarwinLine(domid, data);
+var width = 900;
+var height = "";//auto
+var options = {
+		"header.title.text":"Lots of Programming Languages",
+		"header.subtitle.text":"A full pie chart to show off label collision detection and resolution.",
+};
+line.draw(width, height, options);
+</script>
+
+</body>
+</html>

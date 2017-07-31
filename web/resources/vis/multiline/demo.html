@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="language" content="ru" />
+		<script type="text/javascript" src="/vis/raphael-min.js"></script>
+		<script type="text/javascript" src="/vis/linechart-min.js"></script>
+		<script src="/vis/darwinvis.js"></script>
+		
+		<script type="text/javascript" src="/vis/multiline/darwinmline.js"></script>
+		<title>demo</title>
+	</head>
+	
+	<body>
+		<div id="linechart" style="width: 1000px; height: 300px; margin: 50px auto;"></div>
+	</body>
+	
+</html>
+<script>
+
+window.onload = function() {
+
+var xValues = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000],
+	yValues = [10, 50, 30, 80, 110, 90, 130, 60, 90, 100];
+	y2Values = [50, 30, 90, 110, 20, 60, 90, 30, 70, 30];
+
+
+	var mydata = {
+			"xvalues":xValues,
+			"yvalues":{
+				"aaa":yValues,
+				"bbb":y2Values
+			}
+	};
+	
+	var options = {
+		"header.title.text":"测试趋势图",
+		"graph.legend.show":1,
+		"graph.linestyle.smooth":1,
+		"graph.linestyle.showarea":1
+	};
+	var mline = new DarwinMLine('linechart', mydata);
+	mline.draw(1000, 300, options);
+	
+};
+</script>

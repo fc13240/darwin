@@ -1,0 +1,177 @@
+<div ng-init="storeinfo=storeinfo;index=$index" id="connModal1">
+	<div>
+		<div class="form-group">
+	    	<label for="dataName" class="col-sm-3 control-label"><span class="redStar">*&nbsp;</span>名称：</label>
+	    	<div class="col-sm-6">
+		      	<input type="text" id="dataName" name="storeName{{$index}}" class="form-control " tooltip={{storeinfo.dataName}}  ng-model="storeinfo.dataName" value="{{storeinfo.dataName}}" placeholder="名称" data-rule="required;"  style="margin-left:-20px"/>
+		    </div>		
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="dataType" class="col-sm-3 control-label">数据类型：</label>
+	    	<div class="col-sm-6">
+	    		<select class="form-control" ng-init="storeinfo.dataType=storeinfo.dataType||'text'"  ng-model="storeinfo.dataType" style="margin-left:-20px">
+	    			<option value="{{item.type}}" ng-selected="item.type==storeinfo.dataType" ng-repeat="item in datatypeitems">{{item.name}}</option>
+	    		</select>
+	    	</div>
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="dataType" class="col-sm-3 control-label">数据分割符：</label>
+	    	<div >
+	    		<dataclean-separator control-label="" model-val="storeinfo.colDelimitExpr" other="margin-left:-20px;" style="width:870px" ></dataclean-separator>
+	    	</div>
+	  	</div>
+	  	<hdfs-path index="index" id="hdfs_store" control-label="输出路径" label-col="3" input-col="6" model-val="storeinfo.paDataDir" other="margin-left:-20px;"></hdfs-path>
+	  	<div class="form-group">
+	    	<label for="name" class="col-sm-3 control-label"><span class="redStar">*&nbsp;</span>目录名：</label>
+	    	<div class="col-sm-6">
+	      		<input name="dataDir{{$index}}" ng-model="storeinfo.dataDir" tooltip={{storeinfo.dataDir}} value="{{storeinfo.dataDir}}" type="text" data-rule="required;" class="form-control" placeholder="目录名" style="margin-left:-20px">
+	    	</div>
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="outrowfilter" class="col-sm-3 control-label">数据条件：</label>
+	    	<div class="col-sm-6">
+	    		<select class="form-control" ng-init="storeinfo.outrowfilter=storeinfo.outrowfilter||'no'"  ng-model="storeinfo.outrowfilter" style="margin-left:-20px">
+	    			<option value="{{item.value}}" ng-selected="item.value==storeinfo.outrowfilter" ng-repeat="item in outrowfilters">{{item.text}}</option>
+	    		</select>
+	    	</div>
+	  	</div>
+	  	<div ng-show="storeinfo.outrowfilter!='no'">
+		  	<div class="form-group">
+		    	<label class="col-sm-3 control-label"></label>
+		    	<div class="col-sm-6">
+		      		<input type="radio" value="and" ng-model="storeinfo.outrowfilterType" ng-checked="storeinfo.outrowfilterType=='and'" >AND条件
+		      		<input type="radio" value="or" ng-model="storeinfo.outrowfilterType" ng-checked="storeinfo.outrowfilterType=='or'" >OR条件
+		    	</div>
+		  	</div>
+		  	<div class="form-group">
+		    	<label class="col-sm-3 control-label"></label>
+		    	<div class="col-sm-3">
+		    		<select id="storeinfo-filter-left{{$index}}" class="form-control" style="margin-left:-20px">
+		    			<option ng-repeat="col in getAllCols() track by $index" value="{{col}}">{{col}}</option>
+		    		</select>
+		    	</div>
+		    	
+		    	<div class="col-sm-2">
+		    		<select id="storeinfo-filter-op{{$index}}" ng-init="storeinfoFilter[$index]=storeinfoFilter[$index]||outrowops[0].value" class="form-control" ng-model="storeinfoFilter[$index]" ng-change="validateValue($index)" style="margin-left:-20px">
+		    			<option value="{{item.value}}" ng-selected="item.value==storeinfoFilter[$index]" ng-repeat="item in outrowops">{{item.text}}</option>
+		    		</select>
+		    	</div>
+
+		    	<!-- 验证 -->
+		    	<div class="col-sm-2" id="storeinfo-filter-value-wrap">
+		    		<input type="text" id="storeinfo-filter-value{{$index}}" class="form-control" ng-show="storeinfoFilter[$index]!='isnull' && storeinfoFilter[$index]!='notnull'" style="margin-left:-20px" >
+		    		<!-- 
+		    		<select id="storeinfo-filter-value">
+		    			<option ng-repeat="col in getAllCols() track by $index" value="{{col}}">{{col}}</option>
+		    		</select>
+		    		 -->
+		    	</div>
+		    	
+		    	<div class="col-sm-2">
+		    		<button type="button" class="btn btn-default" ng-click="addStoreFilter($index)" style="margin-left:-20px;height:35px;line-height:15px">
+		    			添加条件
+					</button>
+		    	</div>
+		  	</div>
+		  	<div class="form-group">
+		    	<label class="col-sm-3 control-label"></label>
+		    	<div class="col-sm-6">
+		      		<select size="5" class="form-control" id="storeinfo-filter-selected{{$index}}" style="margin-left:-20px">
+		      			<option value="{{$index}}" ng-repeat="filter in storeinfo.rowfilterDetail">{{filter.colname+'  '+filter.cond+'  '+filter.val}}</option>
+		      		</select>
+		    	</div>
+		    	<div class="col-sm-3">
+		    		<a class="btn btn-xs btn-danger" ng-click="removeStoreFilter($index)">
+		    			删除选中条件
+		    		</a>
+		    	</div>
+		  	</div>
+		  	<div class="form-group">
+		    	<label class="col-sm-3 control-label"></label>
+		    	<div class="col-sm-3">
+		    		<select id="storeinfo-outcols-{{$index}}" class="form-control" style="margin-left:-20px">
+		    			<option ng-repeat="col in getAllCols() track by $index" value="{{col}}">{{col}}</option>
+		    		</select>
+		    	</div>
+		    	<div class="col-sm-2">
+		    		<button type="button" class=" btn btn-default" style="height:35px;line-height:15px" ng-click="addOutCols($index)">
+		    			添加至输出
+					</button>
+		    	</div>
+		    	<div class="col-sm-2">
+		    		<button type="button" class=" btn  btn-default" style="height:35px;line-height:15px" ng-click="addAllOutCols($index)">
+		    			全部输出
+					</button>
+		    	</div>
+				<div class="col-sm-2">
+					<button type="button" class=" btn  btn-default" style="height:35px;line-height:15px" ng-click="removeAllOutCols($index)">
+						全部取消
+					</button>
+				</div>
+		  	</div>
+		  	<div class="form-group">
+		    	<label class="col-sm-3 control-label"></label>
+		    	<div class="col-sm-6">
+		      		<select size="5" class="form-control" id="storeinfo-outcols-selected{{$index}}" style="margin-left:-20px">
+		      			<option value="{{outcol}}" ng-repeat="outcol in storeinfo.outCols">{{outcol}}</option>
+		      		</select>
+		    	</div>
+		    	<div class="col-sm-3">
+		    	<div class="col-sm-1">
+<!-- 		    	 <a href="#" ng-click="upOneStore($index)"> -->
+<!-- 		    		 <span class="glyphicon glyphicon-arrow-up"></span> -->
+<!-- 		    	 </a></br> -->
+<!-- 		    	 <a href="#" ng-click="downOneStore($index)"> -->
+<!-- 		    		 <span class="glyphicon glyphicon-arrow-down"></span> -->
+<!-- 		    	 </a> -->
+			    	<button type="button" class="btn btn-xs btn-default" ng-click="upOneStore($index)">
+						<span class="glyphicon glyphicon-arrow-up"></span>
+					</button></br>
+					<button type="button" class="btn btn-xs btn-default" ng-click="downOneStore($index)">
+						<span class="glyphicon glyphicon-arrow-down"></span>
+					</button>
+				</div>
+		    		<a class="btn btn-xs btn-danger" ng-click="removeOutCols($index)">
+		    			删除选中字段
+		    		</a>
+		    	</div>
+		    	
+		  	</div>
+		  	
+		  	<div class="form-group">
+		    	<label class="col-sm-3 control-label">排序字段</label>
+		    	<div class="col-sm-3">
+		    		<select id="storeinfo-sortcols-{{$index}}" class="form-control" style="margin-left:-20px">
+		    			<option ng-repeat="col in getAllCols() track by $index" value="{{col}}">{{col}}</option>
+		    		</select>
+		    	</div>
+		    	<div class="col-sm-2">
+		    		<button type="button" class="btn  btn-default" style="height:35px;line-height:15px" ng-click="addSortCols($index)">
+		    			添加至排序
+					</button>
+		    	</div>
+		  	</div>
+		  	<div class="form-group">
+		    	<label class="col-sm-3 control-label"></label>
+		    	<div class="col-sm-6">
+		      		<select size="5" class="form-control" id="storeinfo-sortcols-selected{{$index}}" style="margin-left:-20px">
+		      			<option value="{{sortcol}}" ng-repeat="sortcol in storeinfo.sort.cols" >{{sortcol}}</option>
+		      		</select>
+		    	</div>
+		    	<div class="col-sm-3">
+		    		<a class="btn btn-xs btn-danger" ng-click="removeSortCols($index)">
+		    			删除选中字段
+		    		</a>
+		    	</div>
+		  	</div>
+		  	<div class="form-group">
+		    	<label class="col-sm-3 control-label">顺序</label>
+		    	<div class="col-sm-3">
+		    		<select class="form-control" ng-model="storeinfo.sort.order" style="margin-left:-20px">
+		    			<option ng-repeat="order in allOrders track by $index" ng-selected="order.value==storeinfo.sort.order" value="{{order.value}}">{{order.text}}</option>
+		    		</select>
+		    	</div>
+		  	</div>
+	  	</div>
+	</div>
+</div>

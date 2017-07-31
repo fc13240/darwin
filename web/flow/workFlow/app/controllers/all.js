@@ -1,0 +1,3 @@
+define([
+	'./graphpaperCtrl'
+], function () {});

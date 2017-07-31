@@ -1,0 +1,50 @@
+.ztreeDarwin{
+	font-size:14px;
+}
+.ztreeDarwin li a.level0 {
+	padding-left:10px;
+    background: url("img/arrow-right.png") no-repeat scroll 90% 50% transparent;
+    height:47px;
+    line-height:47px;
+    width:100%;
+    border-bottom:1px solid #e0e0e0;
+}
+.ztreeDarwin li span.button.switch {
+    display: none;
+}
+.ztreeDarwin li a.level0 span.button {
+    display: none;
+    float: right;
+    margin-left: 10px;
+    visibility: visible;
+}
+.ztreeDarwin li a.level0 span {
+	font-size:14px;
+}
+.ztreeDarwin li a.level0.curSelectedNode {
+	background: url("img/arrow-right.png") no-repeat scroll 90% 50% transparent;
+    height: 47px !important;
+    border:none;
+    border-bottom:1px solid #e0e0e0;
+}
+.ztreeDarwin li a.level1 {
+    background-color: transparent;
+    margin:5px 0;
+    width:232px;
+    word-spacing: 0;
+}
+.ztreeDarwin li a.level2 {
+    background-color: transparent;
+    margin:5px 0;
+    width:232px;
+    word-spacing: 0;
+}
+.ztreeDarwin li span.button.ico_open{
+	background: url("img/tree-node-bg_red.png") no-repeat scroll 0 50% transparent !important;
+}
+.ztreeDarwin li span.button.ico_close{
+	background: url("img/tree-node-bg_red.png") no-repeat scroll 0 50% transparent !important;
+}
+.ztreeDarwin li span.button.ico_docu{
+	background: url("img/tree-node-bg_red.png") no-repeat scroll 0 50% transparent !important;
+}

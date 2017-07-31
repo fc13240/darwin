@@ -1,0 +1,48 @@
+body{font-family:"Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;padding-top:0;min-width:1280px;background-color:#fff;}
+a{cursor:pointer;}
+.rel{position:relative;}.abs{position:absolute;}
+.l{float:left;}.r{float:right;}.clear{clear:both;font-size:0;}.clearff:after{content: "";height: 0;display: block;clear: both;}.ml50{margin-left:50px;}
+
+#header{position:relative;width:100%;margin-top:70px;min-height:580px;padding-top:108px;background:url("img/login-bg-3.jpg") no-repeat scroll center center;background-size:cover;padding:108px 0 0\0;margin-top:70px\0;}
+.line{height:60px;background:url('img/dash-1px.png') repeat-x 0 50%;}
+.faq-title{height:60px;line-height:36px;font-size:48px;}
+.faq{padding:20px 0;background-color:#fff;}
+.faq h3{margin-top:30px;line-height:36px;color:#6c6c6c;font-size:18px;font-weight:normal;}
+.faq p{line-height:36px;color:#6c6c6c;font-size:14px;}
+#footer{height:68px;background-color:#fcfcfc;border-top:1px solid #d3d3d3;}
+.login-header-bottom{position:absolute;left:50%;right:50%;bottom:-1px;width:39px;height:26px;background:url('img/login-arrow-up.png') no-repeat;}
+.container{width:1280px;}
+.navbar-inverse{height:70px;background:#1c1c1c;color:#fff;border-bottom:4px solid #2d1b1a;}
+.navbar-brand{display:block;background:url('img/logo-union.png') no-repeat;margin-left:96px !important;margin-right:27px !important; width:165px;height:31px;}
+.navbar-inverse .navbar-nav > li > a {color:#fff;}
+.navbar-nav > li > a {padding:11px 27px;}
+#form-wrapper{margin-left:123px;margin-left:123px\0;background:#fff;opacity:0.86;filter:alpha(opacity=86);-khtml-opacity:0.86;-moz-opacity:0.86;-webkit-opacity:0.86;width:335px;height:279px;border-radius:10px;}
+#form-wrapper form{padding:55px 40px;}
+.form-control, .select2-search input[type="text"]{color:#666;border:1px solid #666;text-indent:26px;width:255px !important\0;width:255px !important\9;}
+.login-from-group{position:relative;width:300px\9;}
+.login-from-group b{position:absolute;display:block;width:13px;height:16px;top:12px;left:19px;}
+.login-from-group b.form-account{background:url('img/login-account.png') no-repeat;}
+.login-from-group b.form-passwd{background:url('img/login-passwd.png') no-repeat;}
+.btn-primary{background-color:#f13235;}
+.yun-apply{padding:10px 30px 10px 30px;background:url('img/yun-bg.png') no-repeat 0 50%;}
+.free-download{padding:10px 0 10px 30px;background:url('img/download-bg.png') no-repeat 0 50%;}
+.login-slogan{text-align:center;width:1128px;margin:0 auto;background:url('img/dot-bg.png') repeat-x 0 33px;}
+.login-slogan.no-bg{background:none;}
+.login-slogan h1{font-size:16px;color:#373737;font-weight:bold;line-height:64px;background:#fff;width:200px;margin:0 auto;}
+.login-slogan p{color:#373737;line-height:53px;font-size:14px;}
+.login-video .first{float:left;width:517px;height:274px;border-radius:10px;}
+.login-video .second{float:right;width:517px;height:274px;border-radius:10px;}
+.login-video{width:1128px;margin:0 auto;}
+.video-wrapper{position:relative;height:270px;}
+.video-mask{position:absolute;left:0;top:0;right:0;bottom:0;}
+.video-desc{position:absolute;bottom:-1px;left:0;right:0;height:70px;background-color:#f05a57;border-bottom-left-radius:10px;border-bottom-right-radius:10px;color:#fff;font-size:16px;line-height:70px;text-align:center;}
+#darwin-position{width:1128px;margin:0 auto;}
+#darwin-position img{width:700px;margin:0 auto;display:block;}
+.function-item{width:1128px;margin:0 auto;}
+.function-img{width:318px;height:215px;float:left;}
+.function-desc{width:770px;float:right;}
+.function-desc h2{font-size:15px;}
+.function-desc p{font-size:14px; line-height:2}
+.function-wrapper{margin:10px 0;padding:30px 0;}
+.function-wrapper.even{background-color:#f5f4f4;}
+.footer{width:100% !important;}

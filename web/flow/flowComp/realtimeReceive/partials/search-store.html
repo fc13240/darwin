@@ -1,0 +1,59 @@
+<div ng-init="storeinfo=modelVal;index=$index" id="connModal1">
+	<div>
+	  	<div class="form-group">
+	    	<label for="esIndexStore" class="col-sm-3 control-label">索引名称:</label>
+	    	<div class="col-sm-6">
+	    		<select id="esIndexStore" class="form-control" ng-model="storeinfo.esconfig.index"  style="margin-left:-20px" ng-change="selectTable()">
+	    			<option value="{{item}}" ng-selected="item==storeinfo.esconfig.index"  ng-repeat="item in esIndexList">{{item}}</option>
+	    		</select>
+
+	    	</div>
+	    	
+	    	<div class="col-sm-2" style="margin-left:-40px">
+	    		<a ng-click="openAdvancedSet()">高级设置</a>
+	    	</div>
+			
+	    	<div class="col-sm-1" style="margin-left:-30px;width:100px">
+	    		<a href="/es/edit.jsp?compId={{compId}}&type=realtimeReceive">创建索引</a>
+	    	</div>
+	  	</div>  	
+	</div>
+	<div class="row" id="advancedSet" style="display:none">
+		<label for="sliceOperation" class="col-sm-3 control-label">索引分片数:</label>
+    	<div class="col-sm-6">
+    		<input id="sliceOperation" class="form-control" ng-model="storeinfo.esconfig.shardsnum"  style="margin-left:-20px"/>
+    	</div>
+	</div>
+
+	<div class="row">
+		<div class="form-group">
+			<label for="esIndexStore" class="col-sm-3 control-label">时间字段:</label>
+			<div  class="col-sm-6">
+				<div class="col-sm-4">
+				  <input ng-model='storeinfo.esconfig.timeColumnType' id="getTime" name="timeFormat" type="radio" value="fromAgent"  ng-click="hideTime()">采集时间
+			    </div>
+				<div class="col-sm-4">
+				  <input  ng-model='storeinfo.esconfig.timeColumnType' id="getColume"  name="timeFormat" type="radio" value="fromColumn" ng-click="showTime();" >来自某个字段
+			    </div>
+			    <div class="col-sm-4">
+				  <input  ng-model='storeinfo.esconfig.timeColumnType' id="getNow"  name="timeFormat" type="radio" value="fromCurrent" ng-click="getNow();" >当前时间
+			    </div>
+			</div>
+			<div id="timeFormat" class="col-sm-6" style="display: none;">
+				<div class="col-sm-5">
+					<select id="changeTime" class="form-control" ng-focus="focus()" ng-model="storeinfo.esconfig.timeColumn" style="margin-left:-20px;border-radius: 12px;background-color:#F5F8F8;width:200px;height:30px">
+						<option value="{{item.column_name}}" ng-selected="item.column_name==storeinfo.esconfig.timeColumn" ng-repeat="item in timeColumns">{{item.column_name}}</option>
+					</select>
+			    </div>
+			    <div class="col-sm-5" class="form-control">
+			    	<input id="format" class="form-control" 
+			    	ng-model="storeinfo.esconfig.format" style="margin-left:20px;width:200px;height:30px"/>
+			    </div>
+			</div>
+			<div id="notimedata" class="col-sm-12" style="display:none">
+				<div style="font-size: 15px;color:#BDC3C7;font-weight:bold">没有时间格式的字段,不可选择来自某个字段,请选择采集时间或者当前时间</div>
+			</div>
+		</div>  
+		
+	</div>
+</div>

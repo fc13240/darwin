@@ -1,0 +1,88 @@
+@CHARSET "UTF-8";
+.darwinbar {
+  font: 10px sans-serif;
+}
+
+.bar_title_text {
+	font-size: 20px;
+	color: #2f2f2f;
+	font-family:courier;
+}
+.graph_title_text {
+	font-size: 20px;
+	color: #2f2f2f;
+}
+
+.darwin_axis path,
+.darwin_axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar:hover {
+  opacity: .7 ;
+}
+
+.x.darwin_axis path {
+  display: none;
+}
+
+.d3-tip {
+  font: 10px sans-serif;
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.bar.positive {
+  fill: steelblue;
+}
+
+.bar.negative {
+  fill: brown;
+}
+.bar-bg{
+  fill: #f7f7f7;
+}
+.chord path {
+  fill-opacity: .67;
+  stroke: #000;
+  stroke-width: .5px;
+}
+.mapTooltip {
+	position : fixed;
+	background-color : #fff;
+	moz-opacity:0.70;
+	opacity: 0.70;
+	filter:alpha(opacity=70);
+	border-radius:10px;
+	padding : 10px;
+	z-index: 1000;
+	max-width: 200px;
+	display:none;
+	color:#343434;
+}

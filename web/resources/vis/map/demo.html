@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="language" content="ru" />
+		<script type="text/javascript" src="../raphael-min.js"></script>
+		<script type="text/javascript" src="../jquery-1.11.1.min.js"></script>
+		
+		<script type="text/javascript" src="darwinmap.js"></script>
+		<script src="js/jquery.mapael.js"></script>
+		<script src="js/maps/china_states.js"></script>
+		<title>demo</title>
+	</head>
+	
+	<body>
+		<div id="mapchart">
+			<div class="map" style="width:518px;height:386px;position:relative;">
+			</div>
+		</div>
+	</body>
+	
+</html>
+<script>
+
+window.onload = function() {
+	var data = [];
+	var options = {
+		"header.title.text":"测试趋势图",
+		"graph.legend.show":1,
+		"graph.linestyle.smooth":1,
+		"graph.linestyle.showarea":1
+	};
+	var map = new DarwinMap('mapchart', data);
+	map.draw(1000, 300, options);
+};
+</script>

@@ -1,0 +1,3 @@
+定义了整个应用的 routes，加载了 controller, directives 和 filters 里的全部内容。
+就是在这里，加载了主页面 app/partials/dashboard.html。
+当然，这个页面其实没啥看头，因为里面就是提供 pulldown 和 row 的 div，然后绑定到对应的 controller 上。

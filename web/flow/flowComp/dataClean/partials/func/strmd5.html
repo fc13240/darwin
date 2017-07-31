@@ -1,0 +1,36 @@
+<div id="otherConfig">
+	<div class="form-group">
+    	<label class="col-sm-3 control-label">所属数据：</label>
+    	<div class="col-sm-6">
+    		<select class="form-control" ng-init="vcolItem.data=vcolItem.data||inputinfos[0].dataName" ng-model="vcolItem.data">
+				<option value="{{input.dataName}}" ng-selected="input.dataName==vcolItem.data" ng-repeat="input in inputinfos">{{input.dataName}}</option>
+			</select>
+    	</div>
+  	</div>
+	<div class="form-group">
+    	<label class="col-sm-3 control-label"><span class="redStar">*&nbsp;</span>新列名称：</label>
+    	<div class="col-sm-6">
+      		<input type="text" name="colName" class="form-control" ng-model="vcolItem.colName" ng-init="vcolItem.colName=vcolItem.colName" data-rule="required" placeholder="新列名称" ng-blur="isExist(vcolItem.colName)"/>
+    	</div>
+      <input id="newCol" type="hidden" value="{{vcolItem.colName}}" >
+  	</div>
+  	<!-- 
+  	<div class="form-group">
+    	<label for="hdfsname" class="col-sm-3 control-label">参数赋值：</label>
+  	</div>
+  	 -->
+  	<div class="form-group">
+    	<label class="col-sm-3 control-label">待加密列：</label>
+    	<div class="col-sm-6">
+      		<select class="form-control" ng-model="vcolItem.args[0].value" ng-init="param=vcolItem.args[0]||{type:'field',desc:'待加密列',value:getAllCols()[0]};vcolItem.args[0]=param">
+				<option value="{{col}}" ng-selected="col==vcolItem.args[0].value" ng-repeat="col in getAllCols(vcolItem.data) track by $index">{{col}}</option>
+			</select>
+    	</div>
+  	</div>
+  	<div class="form-group">
+    	<label class="col-sm-3 control-label">混淆值：</label>
+    	<div class="col-sm-6">
+      		<input type="text" class="form-control" ng-model="vcolItem.args[1].value" ng-init="param=vcolItem.args[1]||{type:'string',desc:'混淆值',value:''};vcolItem.args[1]=param" placeholder="混淆值"/>
+    	</div>
+  	</div>
+</div>

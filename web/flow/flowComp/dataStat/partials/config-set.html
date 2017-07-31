@@ -1,0 +1,73 @@
+<div class="panel panel-darwin">
+	<div style="border:1px solid #ccc;" class="panel-heading">
+		统计分析
+	</div>
+	<div>
+		<div>
+			<div class="form-group" style="margin-top:10px">
+		    	<div class="col-sm-10">
+		    		{{statCompConfig.config.config}}
+		    		分组字段：
+		    		<select id="groupby-field">
+		    			<option ng-repeat="col in getAllCols() track by $index" value="{{col}}">{{col}}</option>
+		    		</select>
+		    	</div>
+		    	<div class="col-sm-2">
+		    		<a class="text-success" ng-click="addGroupBy()" title="添加分组字段"><span class="glyphicon glyphicon-plus"></span></a>
+		    	</div>
+		  	</div>
+		  	<div class="form-group">
+		    	<div class="col-sm-10">
+		      		<select size="5" class="form-control" id="groupby-field-selected">
+		      			<option value="{{$index}}" ng-repeat="groupcol in statCompConfig.config.groupby">{{groupcol}}</option>
+		      		</select>
+		    	</div>
+		    	<div class="col-sm-2">
+		    		<a ng-click="removeGroupBy($index)" title="删除选中分组" class="text-danger"><span class="glyphicon glyphicon-trash"></span></a>
+		    	</div>
+		  	</div>
+		</div>
+		<div class="text-right">
+			<a class="text-success" ng-click="addAggregate()"><span class="glyphicon glyphicon-plus"></span>添加统计字段</a>
+		</div>
+		<table  class="table table-condensed">
+			<tbody>
+				<tr ng-repeat="agg in statCompConfig.config.aggregate">
+					<td>
+						<div>
+							计算方式：
+							<select ng-model="agg.method" ng-change="change(this,$index)" ng-init="agg.method=agg.method||computeTypes[0].type">
+								<option value="{{compute.type}}" ng-selected="agg.method==compute.type" ng-repeat="compute in computeTypes">{{compute.name}}</option>
+							</select>
+						</div>
+						<div ng-show="agg.method!='COUNT'">
+							计算字段：
+							<select ng-model="agg.field"  ng-disabled="agg.method=='COUNT'">
+								<option value="{{col}}" ng-selected="agg.field==col" ng-repeat="col in getAllCols()">{{col}}</option>
+							</select>
+						</div>
+						<div>
+							结果列名：
+							<input type="text" ng-model="agg.resultcol" placeholder="结果列名称"/>
+						</div>
+						<div ng-show="agg.method === 'TOPN'">
+							升序/降序：
+							<select ng-init="agg.order = agg.order || 'desc'" ng-model="agg.order">
+								<option value="asc">升序</option>
+								<option value="desc" selected>降序</option>
+							</select>
+						</div>
+						<div ng-show="agg.method==='TOPN'">
+							取前几个：
+							<input type="text" ng-init="agg.topn = agg.topn || 100" ng-model="agg.topn" placeholder="取前几个"/>
+						</div>
+					</td>
+					<td>
+						<a ng-click="removeAggregate($index)" title="删除" class="text-danger"><span class="glyphicon glyphicon-trash"></span></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+</div>

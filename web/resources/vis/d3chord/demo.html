@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+
+<div id="chordChart"></div>
+
+<script src="/resources/vis/jquery-1.11.1.min.js"></script>
+<script src="/resources/vis/d3.min.js"></script>
+<script src="/resources/vis/darwinvis.js"></script>
+<script src="/resources/vis/d3chord/darwinchord.js"></script>
+<script>
+var domid = "chordChart";
+var data = [
+              [11975,  5871, 8916, 2868],
+              [ 1951, 10048, 2060, 6171],
+              [ 8010, 16145, 8090, 8045],
+              [ 1013,   990,  940, 6907]
+            ];
+
+var graph = new DarwinChord(domid, data);
+var width = 800;
+var height = 600;//auto
+var options = {
+		"header.title.text":"Top 15 Fears",
+		"header.subtitle.text":"What strikes the most terror in people?",
+};
+graph.draw(width, height, options);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+{
+    "editable": true,
+    "failover": false,
+    "index": {
+        "default": "_all",
+        "interval": "none",
+        "pattern": "[logstash-]YYYY.MM.DD",
+        "warm_fields": false
+    },
+    "nav": [
+        {
+            "collapse": false,
+            "enable": true,
+            "filter_id": 0,
+            "notice": false,
+            "now": true,
+            "status": "Stable",
+            "timefield": "@timestamp",
+            "type": "timepicker"
+        }
+    ],
+    "rows": [
+        {
+            "collapsable": true,
+            "collapse": false,
+            "editable": true,
+            "height": "150px",
+            "notice": false,
+            "panels": [
+                {
+                    "all_fields": false,
+                    "editable": true,
+                    "error": false,
+                    "exportable": true,
+                    "field_list": true,
+                    "fields": [],
+                    "filter": {
+                        "ids": [
+                            0
+                        ],
+                        "list": {
+                            "0": {
+                                "active": true,
+                                "alias": "",
+                                "field": "dsdsd",
+                                "from": "-12h",
+                                "id": 0,
+                                "mandate": "must",
+                                "query": "dsds",
+                                "to": "",
+                                "type": "field"
+                            }
+                        }
+                    },
+                    "header": true,
+                    "highlight": [],
+                    "loadingEditor": false,
+                    "localTime": false,
+                    "normTimes": true,
+                    "offset": 0,
+                    "overflow": "min-height",
+                    "pages": 5,
+                    "paging": true,
+                    "queries": {
+                        "ids": [
+                            0
+                        ],
+                        "mode": "all"
+                    },
+                    "query": {
+                        "ids": [
+                            0
+                        ],
+                        "list": {
+                            "0": {
+                                "alias": "",
+                                "color": "#7EB26D",
+                                "enable": true,
+                                "id": 0,
+                                "pin": false,
+                                "query": "*ddd",
+                                "type": "lucene"
+                            }
+                        }
+                    },
+                    "size": 100,
+                    "sort": [
+                        "_score",
+                        "desc"
+                    ],
+                    "sortable": true,
+                    "span": 4,
+                    "spyable": true,
+                    "style": {
+                        "font-size": "9pt"
+                    },
+                    "timeField": "@timestamp",
+                    "title": "dddd",
+                    "trimFactor": 300,
+                    "type": "table"
+                }
+            ],
+            "title": "table"
+        }
+    ],
+    "style": "light",
+    "title": "通用仪表盘"
+}
